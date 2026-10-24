@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhosh M | 90-Day Tech Internship & Guidance Program</title>
+    <meta name="description" content="An intensive 90-day tech internship & guidance program by Santhosh M. Hands-on role-based training, real Agile squads, 2 offline meetups, and verified portfolio building.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#080c14',
+                            card: '#0f172a',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            primary: '#10b981',
+                            primaryHover: '#059669',
+                            secondary: '#6366f1',
+                            accent: '#06b6d4',
+                            muted: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#080c14] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-900 overflow-x-hidden">
+
+    <!-- Ambient Glowing Background Orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px]"></div>
+        <div class="absolute top-[35%] -left-40 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[140px]"></div>
+        <div class="absolute top-[65%] -right-40 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[160px]"></div>
+    </div>
+
+    <!-- Top Urgent Batch Announcement Banner -->
+    <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-emerald-600 via-indigo-600 to-emerald-600 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-lg flex items-center justify-center gap-2 flex-wrap">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-white/20 backdrop-blur-sm uppercase tracking-wider font-extrabold animate-pulse">
+            🔥 Limited Cohort
+        </span>
+        <span>Next Batch Registrations Closing Soon! Remote Training + 2 In-Person Offline Meets.</span>
+        <a href="#register" class="underline decoration-emerald-200 hover:text-emerald-100 font-bold ml-1 transition">
+            Reserve Your Seat &rarr;
+        </a>
+    </aside>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-[#080c14]/85 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-400 via-teal-500 to-indigo-600 p-[1.5px] shadow-lg shadow-emerald-500/15 group-hover:shadow-emerald-500/30 transition-all duration-300 transform group-hover:scale-105">
+                    <div class="w-full h-full bg-[#0d1424] rounded-[14px] flex items-center justify-center font-extrabold text-lg text-emerald-400 font-mono tracking-tight">
+                        SM
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg font-extrabold tracking-tight text-white group-hover:text-emerald-300 transition">Santhosh M</span>
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    </div>
+                    <span class="text-[11px] text-emerald-400/90 font-medium tracking-wider uppercase flex items-center gap-1">
+                        Tech Trainer & Mentor
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+                <a href="#overview" class="hover:text-emerald-400 transition-colors py-1">Overview</a>
+                <a href="#journey" class="hover:text-emerald-400 transition-colors py-1">90-Day Journey</a>
+                <a href="#roles" class="hover:text-emerald-400 transition-colors py-1">Role Tracks</a>
+                <a href="#routine" class="hover:text-emerald-400 transition-colors py-1">Daily Cadence</a>
+                <a href="#meetups" class="hover:text-emerald-400 transition-colors py-1">Offline Meets</a>
+                <a href="#pricing" class="hover:text-emerald-400 transition-colors py-1">Fee & Value</a>
+                <a href="#faq" class="hover:text-emerald-400 transition-colors py-1">FAQ</a>
+            </nav>
+
+            <!-- Header CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#pricing" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-white/10 hover:border-emerald-500/30 transition">
+                    Fee: ₹3,000
+                </a>
+                <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" class="whatsapp-btn group relative inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 transition transform hover:-translate-y-0.5">
+                    <i class="fab fa-whatsapp text-lg group-hover:rotate-12 transition-transform"></i>
+                    <span>Register on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="lg:hidden text-slate-300 hover:text-white p-2 rounded-xl border border-white/10 hover:border-emerald-500/30">
+                <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#0d1424]/95 backdrop-blur-2xl border-b border-white/10 px-5 pt-3 pb-6 space-y-3">
+            <a href="#overview" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Overview</a>
+            <a href="#journey" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">90-Day Journey</a>
+            <a href="#roles" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Role Tracks</a>
+            <a href="#routine" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Daily Cadence</a>
+            <a href="#meetups" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Offline Meets</a>
+            <a href="#pricing" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Fee & Value</a>
+            <a href="#faq" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium">FAQ</a>
+            
+            <div class="pt-3">
+                <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Register on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <!-- Hero Section -->
+        <section id="overview" class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Batch Launch Pill & Countdown -->
+                <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-6">
+                    <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wide shadow-sm">
+                        <i class="fa-solid fa-code-branch text-emerald-400"></i>
+                        <span>90-Day Industry Readiness Program • 2026 Cohort</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12] mb-6">
+                        Break Into Tech With <br class="hidden sm:inline" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
+                            Real Agile Squads
+                        </span> & Mentorship
+                    </h1>
+
+                    <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                        A rigorous, hands-on 90-day internship guided by <span class="text-white font-semibold underline decoration-emerald-500/50 underline-offset-4">Santhosh M</span>. Master your role, deliver production code in 5-person squads, and meet offline for pitch & celebration.
+                    </p>
+
+                    <!-- Countdown Timer Card -->
+                    <div class="w-full max-w-xl bg-slate-900/60 border border-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-5 mb-10 shadow-2xl">
+                        <div class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-3 flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-clock text-emerald-400"></i>
+                            <span>Next Cohort Registration Closes In:</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center font-mono">
+                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400" id="timerDays">08</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Days</span>
+                            </div>
+                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerHours">14</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Hours</span>
+                            </div>
+                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerMins">45</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Mins</span>
+                            </div>
+                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-indigo-400" id="timerSecs">20</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                        <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-base">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Register on WhatsApp (₹3,000)</span>
+                        </a>
+                        <a href="#journey" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold px-8 py-4 rounded-2xl border border-white/10 hover:border-white/20 transition flex items-center justify-center gap-2 text-base backdrop-blur-md">
+                            <span>Explore 90-Day Roadmap</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Micro Social Proof -->
+                    <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                            <span>No Boring Tutorials • 100% Practical</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                            <span>GitHub PR Reviews & Verified Proofs</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                            <span>Verified Certificate of Completion</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4 Highlight Stat Cards -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider">Duration</span>
+                            <i class="fa-solid fa-calendar-check text-slate-500 group-hover:text-emerald-400 transition"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">90 Days</div>
+                        <div class="text-xs text-slate-400">~13 Weeks of Structured Growth</div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono font-semibold text-indigo-400 uppercase tracking-wider">Format</span>
+                            <i class="fa-solid fa-laptop-code text-slate-500 group-hover:text-indigo-400 transition"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">Remote + Meets</div>
+                        <div class="text-xs text-slate-400">Online Work + 2 In-Person Gatherings</div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-teal-500/30 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono font-semibold text-teal-400 uppercase tracking-wider">Discipline</span>
+                            <i class="fa-solid fa-stopwatch text-slate-500 group-hover:text-teal-400 transition"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">4 Hrs / Day</div>
+                        <div class="text-xs text-slate-400">Mon-Fri Routine with SOD & EOD</div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider">Value Fee</span>
+                            <i class="fa-solid fa-shield-halved text-slate-500 group-hover:text-emerald-400 transition"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">₹3,000 Total</div>
+                        <div class="text-xs text-slate-400">₹33/Day • All Inclusive Fee</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Program Architecture & Roadmap (The Big Picture) -->
+        <section id="journey" class="py-24 bg-[#0a101d] border-t border-b border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                        The Master Blueprint
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                        Your 90-Day Transformation Roadmap
+                    </h2>
+                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                        Designed meticulously to replace superficial knowledge with industry-grade engineering practices.
+                    </p>
+                </div>
+
+                <!-- 3 Phase Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Phase 1 -->
+                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/10 hover:border-indigo-500/40 transition-all duration-300 relative group">
+                        <div class="absolute top-0 right-0 bg-indigo-500/20 text-indigo-300 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-indigo-500/30">
+                            Days 1 - 30
+                        </div>
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-semibold">Phase 1</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 mb-3">Role-Based Mastery</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Master your chosen specialization through weekly live masterclasses, hands-on coding drills, and weekly graded tasks.
+                            </p>
+                            
+                            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Weekly live masterclass + Q&A</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Git, GitHub branching & PR workflows</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Day-30 Practical Skill Gate Assessment</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-indigo-500/20 text-xs text-indigo-300 font-medium">
+                            🎯 <strong>Milestone:</strong> Score 60+ points to qualify for squad team leadership or core product roles.
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-emerald-500/30 shadow-xl shadow-emerald-500/5 hover:border-emerald-500/50 transition-all duration-300 relative group">
+                        <div class="absolute -top-3 left-8 bg-emerald-500 text-slate-950 font-bold text-[11px] px-3 py-0.5 rounded-full uppercase tracking-wider">
+                            Core Sprint Engine
+                        </div>
+                        <div class="absolute top-0 right-0 bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-emerald-500/30">
+                            Days 31 - 85
+                        </div>
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">Phase 2</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 mb-3">Cross-Functional Squads</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Join a 5-6 member squad (Frontend, Backend, UI/UX, QA, PM). Build a full-stack, enterprise-ready product across four 15-day Agile sprints.
+                            </p>
+                            
+                            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Agile Sprint Planning & Wednesday scrums</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Code reviews, CI/CD pipeline, and unit tests</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Offline Meet #1: Mid-way sync & deep review</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-500/20 text-xs text-emerald-300 font-medium">
+                            🚀 <strong>Milestone:</strong> A tangible, production-deployed web application in your personal GitHub portfolio.
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/10 hover:border-cyan-500/40 transition-all duration-300 relative group">
+                        <div class="absolute top-0 right-0 bg-cyan-500/20 text-cyan-300 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-cyan-500/30">
+                            Days 86 - 90
+                        </div>
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Phase 3</span>
+                            <h3 class="text-2xl font-bold text-white mt-1 mb-3">Pitch & Certification</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                The grand finale! Polish your documentation, present your live build at Demo Day, and graduate with industry-verified credentials.
+                            </p>
+                            
+                            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Live product pitch to mentor panel</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Offline Meet #2: Certificate award & networking</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <span>Referral & recommendation for top candidates</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-500/20 text-xs text-cyan-300 font-medium">
+                            🏆 <strong>Outcome:</strong> Verified Internship Certificate + Strong Industry Reference Letter.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Role Tracks Interactive Section -->
+        <section id="roles" class="py-24 bg-[#080c14] relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                        Choose Your Specialization
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                        5 High-Impact Role Tracks
+                    </h2>
+                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                        Select the path that matches your ambition. Each track is designed with real deliverables and weekly rubrics.
+                    </p>
+                </div>
+
+                <!-- Track Selection Tab Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="roleTabs">
+                    <button class="role-tab active px-5 py-3 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-2" data-track="frontend">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Frontend Engineering</span>
+                    </button>
+                    <button class="role-tab px-5 py-3 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-2" data-track="backend">
+                        <i class="fa-solid fa-server"></i>
+                        <span>Backend Engineering</span>
+                    </button>
+                    <button class="role-tab px-5 py-3 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-2" data-track="uiux">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                        <span>UI / UX Design</span>
+                    </button>
+                    <button class="role-tab px-5 py-3 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-2" data-track="qa">
+                        <i class="fa-solid fa-bug-slash"></i>
+                        <span>QA & Automation</span>
+                    </button>
+                    <button class="role-tab px-5 py-3 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-2" data-track="product">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Product / Business Analyst</span>
+                    </button>
+                </div>
+
+                <!-- Dynamic Track Content Box -->
+                <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative overflow-hidden" id="trackCardContainer">
+                    
+                    <!-- Content will be swapped by JavaScript, default is Frontend -->
+                    <div id="trackContent">
+                        <!-- Populated by JavaScript -->
+                    </div>
+
+                    <!-- Bottom Bar of Track Card -->
+                    <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-2 text-xs text-slate-400">
+                            <i class="fa-solid fa-shield-check text-emerald-400"></i>
+                            <span>Includes 1:1 Code Reviews & Weekly Assessment Rubrics</span>
+                        </div>
+                        <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm text-center transition">
+                            Apply for This Track &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Daily Routine & Agile Cadence -->
+        <section id="routine" class="py-24 bg-[#0a101d] border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                        Professional Work Ethic
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                        Your Daily Routine & Agile Cadence
+                    </h2>
+                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                        We don't do passive video watching. We build accountability that matches high-performing engineering organizations.
+                    </p>
+                </div>
+
+                <!-- 3 Step Daily Workflow -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    
+                    <!-- Step 1 -->
+                    <div class="glass-card p-8 rounded-3xl border border-white/10 relative hover:border-emerald-500/30 transition">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">
+                                Step 01 • Morning
+                            </span>
+                            <span class="text-xs text-slate-400 font-mono">By 10:30 AM IST</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Start-of-Day (SOD) Plan</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Log into the portal every weekday morning. Post 2 to 5 targeted task commitments with estimated completion hours and potential impediments.
+                        </p>
+                        <div class="text-xs text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-white/5 font-mono">
+                            <code>&gt; SOD: 3 Jira tickets, 1 PR review, Figma wireframe check</code>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="glass-card p-8 rounded-3xl border border-white/10 relative hover:border-indigo-500/30 transition">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono font-bold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">
+                                Step 02 • Core Hours
+                            </span>
+                            <span class="text-xs text-slate-400 font-mono">Flexible 4 Hours</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Deep Focus & Squad Build</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Spend 4 focused hours building features, pushing code to GitHub branches, running tests, or syncing in Discord community channels with mentors.
+                        </p>
+                        <div class="text-xs text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-white/5 font-mono">
+                            <code>&gt; git commit -m "feat(auth): add jwt refresh tokens"</code>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="glass-card p-8 rounded-3xl border border-white/10 relative hover:border-teal-500/30 transition">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono font-bold text-teal-400 bg-teal-500/10 px-3 py-1 rounded-full">
+                                Step 03 • Evening
+                            </span>
+                            <span class="text-xs text-slate-400 font-mono">By 7:30 PM IST</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">End-of-Day (EOD) Proof</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Submit your daily EOD report with completion percentages, lessons learned, and verifiable links (GitHub Pull Requests, live URLs, or Figma links).
+                        </p>
+                        <div class="text-xs text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-white/5 font-mono">
+                            <code>&gt; EOD: PR #42 merged, 100% tasks completed with proof</code>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Wednesday Agile Scrum Special Banner -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-indigo-500/30 bg-gradient-to-r from-indigo-950/40 via-slate-900/90 to-emerald-950/30 relative overflow-hidden shadow-2xl">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                        <div class="space-y-3">
+                            <div class="inline-flex items-center gap-2 text-indigo-400 font-mono text-xs font-semibold uppercase tracking-wider bg-indigo-500/10 px-3 py-1 rounded-full">
+                                <i class="fa-solid fa-users"></i>
+                                <span>Weekly Cadence Pillar</span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white">
+                                Wednesday Agile Scrum Call (45 Minutes)
+                            </h3>
+                            <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
+                                Every single Wednesday evening, the entire batch convenes on Google Meet. Every squad member presents a 2-minute recap: what was accomplished, what's next, and where they need unblocking. Mentors provide instant guidance on architectural bottlenecks.
+                            </p>
+                        </div>
+                        
+                        <div class="shrink-0 text-center bg-slate-900/90 p-5 rounded-2xl border border-white/10 w-full lg:w-auto">
+                            <span class="text-xs text-slate-400 uppercase font-mono block mb-1">Time & Frequency</span>
+                            <div class="text-xl font-extrabold text-white">Wednesdays @ 7:00 PM</div>
+                            <span class="text-xs text-emerald-400 font-medium mt-1 block">Live Google Meet Call</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Offline Meets & Human Connection -->
+        <section id="meetups" class="py-24 bg-[#080c14] border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                            Hybrid Advantage
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 mb-6 tracking-tight leading-tight">
+                            Remote Efficiency Meets <br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-indigo-400">
+                                In-Person Bonding
+                            </span>
+                        </h2>
+                        <p class="text-slate-300 text-base leading-relaxed mb-8">
+                            While daily tasks and scrums happen remotely from the comfort of your home, software engineering thrives on real camaraderie. We host <strong>two high-energy offline gatherings in India</strong> to build lifelong professional networks.
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- Meetup 1 -->
+                            <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition flex gap-4 items-start">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl font-bold shrink-0">
+                                    <i class="fa-solid fa-map-pin"></i>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <h4 class="text-lg font-bold text-white">Offline Meet #1: Mid-Point Sync</h4>
+                                        <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Day 45</span>
+                                    </div>
+                                    <p class="text-slate-400 text-sm leading-relaxed">
+                                        Meet your squad members in person! Whiteboard session on system architecture, sprint retrospective, code reviews, and personal 1-on-1 mentorship with Santhosh M.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Meetup 2 -->
+                            <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-indigo-500/30 transition flex gap-4 items-start">
+                                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl font-bold shrink-0">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <h4 class="text-lg font-bold text-white">Offline Meet #2: Grand Demo Day & Pitch</h4>
+                                        <span class="text-[11px] font-mono text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">Days 88 - 90</span>
+                                    </div>
+                                    <p class="text-slate-400 text-sm leading-relaxed">
+                                        Present your live capstone product on stage to an evaluator panel, celebrate graduation, receive your verified hard-copy certificate, and join the exclusive alumni network.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evaluation & 100-Point Rubric Card -->
+                    <div id="evaluation" class="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 shadow-2xl relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">100-Point Evaluation Matrix</h3>
+                                <p class="text-slate-400 text-xs mt-1">Transparent score-based certification qualification</p>
+                            </div>
+                            <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                                Pass: 70+ Pts
+                            </span>
+                        </div>
+
+                        <!-- Breakdown items -->
+                        <div class="space-y-3.5 text-sm">
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-clock-rotate-left text-slate-500"></i>
+                                    <span>Daily Login & Morning SOD Discipline</span>
+                                </span>
+                                <span class="font-mono font-bold text-emerald-400">10 Pts</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-link text-slate-500"></i>
+                                    <span>Evening EOD Quality & Proof Verifications</span>
+                                </span>
+                                <span class="font-mono font-bold text-emerald-400">10 Pts</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-laptop-code text-slate-500"></i>
+                                    <span>Month-1 Tasks & Day-30 Skill Gate</span>
+                                </span>
+                                <span class="font-mono font-bold text-emerald-400">20 Pts</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-brands fa-github text-slate-500"></i>
+                                    <span>Code Contributions & GitHub Pull Requests</span>
+                                </span>
+                                <span class="font-mono font-bold text-emerald-400">30 Pts</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-handshake text-slate-500"></i>
+                                    <span>Squad Collaboration & Wednesday Scrum</span>
+                                </span>
+                                <span class="font-mono font-bold text-emerald-400">20 Pts</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-award text-slate-500"></i>
+                                    <span>Final Capstone Demo & Documentation</span>
+                                </span>
+                                <span class="font-mono font-bold text-emerald-400">10 Pts</span>
+                            </div>
+                        </div>
+
+                        <!-- Merit Tier note -->
+                        <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-transparent to-indigo-500/10 border border-emerald-500/20 text-xs text-slate-300 flex items-center gap-3">
+                            <i class="fa-solid fa-star text-amber-400 text-lg shrink-0"></i>
+                            <div>
+                                <span class="text-white font-bold">Merit Distinction (85+ Points):</span>
+                                <span>Receive personal recommendation letters for tech job interviews and priority client referrals.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pricing & Value Transparency -->
+        <section id="pricing" class="py-24 bg-[#0a101d] border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                        Honest & Transparent
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                        One Simple Price. Pure Value.
+                    </h2>
+                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                        No ₹30,000+ bootcamps. No hidden add-ons. Just pure, focused guidance to jumpstart your career.
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border border-emerald-500/30 relative shadow-2xl">
+                    <div class="absolute -top-3 right-8 bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                        All-Inclusive 90 Days
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-8 border-b border-white/10">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">Total Program Fee</span>
+                            <div class="text-5xl sm:text-6xl font-black text-white mt-1">
+                                ₹3,000
+                                <span class="text-sm font-normal text-slate-400">/ 90 Days</span>
+                            </div>
+                            <span class="text-xs text-slate-400 mt-1 block">That's just <strong>₹33 per day</strong> for live mentor guidance</span>
+                        </div>
+                        <div class="sm:text-right">
+                            <span class="inline-block bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 px-3 py-1.5 rounded-xl text-xs font-semibold">
+                                ✓ 100% Transparency Guarantee
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- What's included checklist -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-8 border-b border-white/10 text-sm text-slate-200">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>4 Masterclasses & Weekly Coding Rubrics</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>Cross-functional Squad Placement (5-6 members)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>Real GitHub Repositories & Pull Request Reviews</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>Weekly Wednesday Scrum Agile Calls</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>2 In-Person Offline Meetups in India</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>100-Point Verified Certification with ID</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>Direct 1-on-1 Guidance with Santhosh M</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <span>Letter of Recommendation for Top Performers</span>
+                        </div>
+                    </div>
+
+                    <!-- Call to action inside pricing -->
+                    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                        <div class="text-xs text-slate-400 text-center sm:text-left">
+                            💳 Payment is collected via UPI / QR Code directly inside the official WhatsApp group after initial screening.
+                        </div>
+                        <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 shrink-0">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Join WhatsApp & Enroll</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Mentor Profile Spotlight -->
+        <section class="py-24 bg-[#080c14] border-t border-white/5 relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10 relative overflow-hidden flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    
+                    <!-- Avatar / Initials Badge -->
+                    <div class="shrink-0 text-center">
+                        <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-3xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 p-1 shadow-2xl shadow-emerald-500/20 mx-auto">
+                            <div class="w-full h-full bg-[#0d1424] rounded-[22px] flex flex-col items-center justify-center text-center p-4">
+                                <span class="font-mono text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-indigo-300">
+                                    SM
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono mt-1 uppercase">Lead Mentor</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span>Direct Hands-on Guidance</span>
+                        </div>
+                    </div>
+
+                    <!-- Bio -->
+                    <div class="space-y-4 text-center md:text-left">
+                        <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">Meet Your Instructor & Guide</span>
+                        <h3 class="text-3xl font-extrabold text-white">Santhosh M</h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            "Most students and fresh graduates struggle not because they lack passion, but because college curriculums rarely mirror how modern engineering teams build software. In this 90-day journey, I bridge that gap. You won't just learn syntax—you will learn Git discipline, pull request etiquette, sprint reviews, and how to ship reliable products that stand out in any interview."
+                        </p>
+                        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                                🚀 <strong>100% Practical Mentorship</strong>
+                            </div>
+                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                                🤝 <strong>Real Team Dynamics</strong>
+                            </div>
+                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                                📍 <strong>2 Offline Gatherings</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-[#0a101d] border-t border-white/5 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-16">
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                        Got Questions?
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                        Everything you need to know before joining Santhosh M's 90-day cohort.
+                    </p>
+                </div>
+
+                <!-- FAQ Accordion List -->
+                <div class="space-y-4" id="faqAccordion">
+                    
+                    <!-- Item 1 -->
+                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                            <span class="text-base sm:text-lg">Do I need to be online for the entire day?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-white/5">
+                                No. You need roughly 4 dedicated hours per day that you can schedule flexibly around your college or work, plus adherence to the 10:30 AM SOD deadline and 7:30 PM EOD proof submission. The only fixed live commitments are the weekly masterclass and the 45-minute Wednesday Agile Scrum.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                            <span class="text-base sm:text-lg">What happens if I miss a live class or Wednesday Scrum?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-white/5">
+                                Every live session is recorded in HD and uploaded to the student repository within 2 hours. If you have an exam or emergency, simply inform your squad and mentor beforehand in the channel. You will still be eligible to submit your weekly task by Friday 9 PM.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                            <span class="text-base sm:text-lg">Are the 2 offline meetups mandatory?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-white/5">
+                                Attending offline meets in person is strongly encouraged because the networking, team chemistry, and demo experience are invaluable. However, if you are located in a distant state and cannot travel, a live interactive virtual stream will be set up so you won't miss your Demo Day presentation or grading.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                            <span class="text-base sm:text-lg">What kind of certificate do I receive upon completion?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-white/5">
+                                You receive a verifiable Certificate of Completion with a unique verification code, specifying your specialized role track (Frontend, Backend, UI/UX, QA, or Product) and your squad capstone project details. High-ranking candidates (85+ points) receive an official Letter of Recommendation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                            <span class="text-base sm:text-lg">How do I register and pay the ₹3,000 fee?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-white/5">
+                                Simply click any of the "Register on WhatsApp" buttons on this page. You will immediately enter our official WhatsApp enrollment group. Santhosh M and the team will share the onboarding form, track confirmation, and official UPI payment details.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final High-Converting Call To Action Section -->
+        <section id="register" class="py-24 bg-gradient-to-t from-[#080c14] via-[#0d1424] to-[#0a101d] text-center relative overflow-hidden border-t border-white/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20 inline-block mb-4">
+                    Take Action Today
+                </span>
+                
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                    Ready to Build Real Code & <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
+                        Stand Out to Top Tech Recruiters?
+                    </span>
+                </h2>
+                
+                <p class="text-slate-300 text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Stop collecting random certificates from video courses. Join Santhosh M's 90-day internship, ship real software with your squad, and build a career you're proud of.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-10 py-5 rounded-2xl shadow-2xl shadow-emerald-500/30 transform hover:-translate-y-1 transition text-lg">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                        <span>Join WhatsApp Group to Register</span>
+                    </a>
+                </div>
+
+                <div class="mt-6 text-xs text-slate-400 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock text-emerald-400"></i>
+                    <span>Official WhatsApp Group • Instant Admission & Verification</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#05080e] border-t border-white/5 py-12 text-slate-400 text-sm relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-indigo-500 flex items-center justify-center font-bold text-slate-950 font-mono text-sm">
+                        SM
+                    </div>
+                    <div>
+                        <div class="text-white font-bold tracking-tight">Santhosh M</div>
+                        <div class="text-xs text-emerald-400">Tech Trainer & Guidance Program</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-400">
+                    <a href="#overview" class="hover:text-emerald-400 transition">Overview</a>
+                    <a href="#journey" class="hover:text-emerald-400 transition">90-Day Journey</a>
+                    <a href="#roles" class="hover:text-emerald-400 transition">Role Tracks</a>
+                    <a href="#routine" class="hover:text-emerald-400 transition">Daily Cadence</a>
+                    <a href="#pricing" class="hover:text-emerald-400 transition">Fee & Value</a>
+                    <a href="#faq" class="hover:text-emerald-400 transition">FAQ</a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
+                <div>
+                    &copy; 2026 Santhosh M. All rights reserved. 90-Day Tech Internship & Guidance Program.
+                </div>
+                <div class="flex items-center gap-4">
+                    <span>Remote Program with 2 Offline Meets in India</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Pill for Mobile & Quick Access -->
+    <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" aria-label="Register on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 flex items-center justify-center transition-all duration-300 transform hover:scale-110 group">
+        <i class="fab fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-bold text-sm px-0 group-hover:px-2">
+            Register on WhatsApp
+        </span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top" class="fixed bottom-6 left-6 z-40 bg-slate-900/90 border border-white/10 hover:border-emerald-500/40 text-slate-300 hover:text-white p-3 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300">
+        <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+    <!-- Custom Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
