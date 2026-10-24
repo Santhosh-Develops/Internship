@@ -1,158 +1,188 @@
-// Interactive functionality for Santhosh M Internship Landing Page
+// Interactive functionality for Iconic Hub 90-Day Tech Internship Landing Page
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Role Tracks Data
+    // 1. Updated 6 Specialized Role Tracks Data
     const tracksData = {
         frontend: {
-            title: "Frontend Engineering Track",
-            subtitle: "Build modern, responsive, and blazing-fast web interfaces",
+            title: "Frontend Developer",
+            subtitle: "Architect blazing-fast, responsive & aesthetic web interfaces",
             icon: "fa-code",
             colorClass: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
-            tags: ["HTML5 & CSS3", "Tailwind CSS", "JavaScript (ES6+)", "React.js", "Next.js", "Git & GitHub"],
+            tags: ["HTML5 & CSS3", "Tailwind CSS", "JavaScript (ES6+)", "React.js", "Next.js", "Git & GitHub PRs"],
             modules: [
                 {
                     week: "Week 01",
-                    title: "Modern Semantic HTML & Advanced CSS Architecture",
-                    desc: "Responsive layout design with Flexbox, CSS Grid, mobile-first workflows, and Tailwind CSS masterclass."
+                    title: "Modern Semantic UI & Responsive Tailwind Systems",
+                    desc: "Mobile-first layouts, Flexbox & CSS Grid, responsive design tokens, and clean Tailwind CSS setups."
                 },
                 {
                     week: "Week 02",
-                    title: "JavaScript ES6+, DOM Manipulation & Async APIs",
-                    desc: "Event handling, promises, async/await, fetching REST APIs, error states, and local storage state persistence."
+                    title: "Modern JavaScript ES6+, DOM & Async REST Integration",
+                    desc: "Async/await patterns, Axios/Fetch, error states, localStorage caching, and API consumption."
                 },
                 {
                     week: "Week 03",
-                    title: "React Fundamentals: Components, Props & Hooks",
-                    desc: "State management with useState/useEffect, custom hooks, component composition, and client-side routing."
+                    title: "React.js & Next.js Architecture",
+                    desc: "Component lifecycle, useState/useEffect, custom hooks, dynamic routing, and global state management."
                 },
                 {
                     week: "Week 04",
-                    title: "Real-World Dashboard Project & Day-30 Skill Gate",
-                    desc: "Build an interactive analytics web app with live API integration, unit tests, and GitHub PR review."
+                    title: "Production Dashboard & Day-30 Skill Gate",
+                    desc: "Build an interactive analytics web app with live APIs, CI/CD linting, and GitHub Pull Request review."
                 }
             ],
-            squadRole: "You will architect client-facing features, build sleek responsive UI components, and integrate backend REST/GraphQL APIs."
+            squadRole: "Lead user interface development, craft reusable components, and integrate backend endpoints in Phase 2 squads."
         },
         backend: {
-            title: "Backend Engineering Track",
-            subtitle: "Design scalable REST APIs, secure authentication & databases",
+            title: "Backend Developer",
+            subtitle: "Design scalable REST & GraphQL APIs, secure auth & databases",
             icon: "fa-server",
             colorClass: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30",
-            tags: ["Node.js / Express", "PostgreSQL / MongoDB", "REST APIs", "JWT Auth", "Prisma ORM", "Docker Basics"],
+            tags: ["Node.js / Express", "PostgreSQL / MongoDB", "Prisma ORM", "JWT Authentication", "REST APIs", "Docker Basics"],
             modules: [
                 {
                     week: "Week 01",
-                    title: "Server Architecture & RESTful API Foundations",
-                    desc: "Node.js runtime, Express routing, middleware pipelines, request validation, and environment configuration."
+                    title: "Node.js Architecture & REST Principles",
+                    desc: "Server structure, Express middleware pipelines, request validation, CORS, and environment configs."
                 },
                 {
                     week: "Week 02",
-                    title: "Relational & Document Databases (PostgreSQL / Mongo)",
-                    desc: "Schema design, relational indexing, CRUD operations, transactions, and Prisma/Mongoose query optimizations."
+                    title: "Databases & Schema Engineering (PostgreSQL & Mongo)",
+                    desc: "Relational indexing, transactions, CRUD operations, aggregation pipelines, and Prisma/Mongoose ORM."
                 },
                 {
                     week: "Week 03",
-                    title: "Authentication, Authorization & Security Hardening",
-                    desc: "JWT tokens, refresh token rotation, password hashing (bcrypt), CORS, rate limiting, and security best practices."
+                    title: "Authentication, JWT Tokens & Security",
+                    desc: "Password encryption (bcrypt), JWT refresh token rotation, rate limiting, and RBAC authorization."
                 },
                 {
                     week: "Week 04",
-                    title: "Secure E-Commerce / SaaS Backend Assessment",
-                    desc: "Deploy a production-ready API with Swagger documentation, integration test suite, and clean architecture."
+                    title: "Microservice / API Capstone & Evaluation Gate",
+                    desc: "Deploy a production-ready API with Swagger documentation, automated integration tests, and database seeding."
                 }
             ],
-            squadRole: "You will manage server business logic, craft database models, ensure sub-100ms response times, and provide secure API endpoints."
+            squadRole: "Design database schemas, write secure API endpoints, ensure sub-100ms response times, and provide robust auth."
+        },
+        fullstack: {
+            title: "Fullstack Developer",
+            subtitle: "Bridge client and server to build complete end-to-end applications",
+            icon: "fa-layer-group",
+            colorClass: "text-teal-400 bg-teal-500/10 border-teal-500/30",
+            tags: ["React & Next.js", "Node.js / Express", "PostgreSQL / Prisma", "Server Actions", "Full Auth Flow", "Vercel / Cloud"],
+            modules: [
+                {
+                    week: "Week 01",
+                    title: "Fullstack Architecture & Modern Monorepos",
+                    desc: "Fullstack patterns, Next.js App Router, server-side rendering vs client rendering, and shared TypeScript types."
+                },
+                {
+                    week: "Week 02",
+                    title: "Database Modeling & API Endpoints",
+                    desc: "Connecting frontend forms to PostgreSQL/Prisma backends with server actions and RESTful API routes."
+                },
+                {
+                    week: "Week 03",
+                    title: "End-to-End Authentication & State Flow",
+                    desc: "NextAuth / JWT session handling, protected routes, payment gateway integration (Razorpay/Stripe sandbox)."
+                },
+                {
+                    week: "Week 04",
+                    title: "Complete SaaS Capstone & Evaluation Gate",
+                    desc: "Deliver a full-fledged SaaS MVP with user onboarding, database persistence, and production deployment on Vercel."
+                }
+            ],
+            squadRole: "Connect frontend components with backend database models, build end-to-end user workflows, and deploy live apps."
         },
         uiux: {
-            title: "UI / UX Design Track",
-            subtitle: "Create high-converting design systems, wireframes & interactive Figma prototypes",
+            title: "UI / UX Designer",
+            subtitle: "Craft intuitive user journeys, wireframes & interactive Figma design systems",
             icon: "fa-pen-ruler",
             colorClass: "text-pink-400 bg-pink-500/10 border-pink-500/30",
-            tags: ["Figma Systems", "Wireframing", "User Research", "Typography & Color", "Interactive Prototyping"],
+            tags: ["Figma Design Systems", "Wireframing", "User Research", "Auto-Layout", "Interactive Prototypes", "Dev Handoff"],
             modules: [
                 {
                     week: "Week 01",
-                    title: "Design Principles, Visual Hierarchy & Figma Mastery",
-                    desc: "Auto-layout, responsive constraints, design tokens, typography scales, and accessible color systems (WCAG)."
+                    title: "Visual Design Foundations & Figma Mastery",
+                    desc: "Auto-layout, responsive constraints, typography scales, spacing tokens, and accessible WCAG color contrast."
                 },
                 {
                     week: "Week 02",
-                    title: "User Empathy, Problem Discovery & Low-Fi Wireframing",
-                    desc: "User interviews, persona building, information architecture, user flows, and low-fidelity rapid sketches."
+                    title: "User Empathy, Problem Discovery & Wireframes",
+                    desc: "User interviews, persona creation, information architecture, user flows, and low-fidelity rapid wireframes."
                 },
                 {
                     week: "Week 03",
-                    title: "Component Libraries & High-Fidelity Interactive Prototypes",
-                    desc: "Creating reusable Figma component kits with variants, states, micro-interactions, and developer handoff specs."
+                    title: "Design Systems & High-Fidelity Interactive Prototypes",
+                    desc: "Component variants, interactive states, micro-animations, design tokens, and developer handoff documentation."
                 },
                 {
                     week: "Week 04",
-                    title: "End-to-End Product Case Study & Evaluation Gate",
-                    desc: "Complete a real-world redesign case study with user testing feedback, prototype links, and presentation slides."
+                    title: "End-to-End Product Case Study Presentation",
+                    desc: "Create and present a complete product redesign case study with user testing data and interactive Figma preview."
                 }
             ],
-            squadRole: "You will lead product UI design, define design tokens in Figma, test flows with target users, and guide developers during implementation."
+            squadRole: "Drive product visual design, create Figma kits for developers, review UI implementations, and conduct usability tests."
         },
-        qa: {
-            title: "QA & Testing Track",
-            subtitle: "Guarantee rock-solid software quality through manual & automated testing",
+        testing: {
+            title: "Testing & QA Engineer",
+            subtitle: "Guarantee rock-solid reliability through manual & automated testing pipelines",
             icon: "fa-bug-slash",
             colorClass: "text-amber-400 bg-amber-500/10 border-amber-500/30",
-            tags: ["Manual Testing", "Test Cases", "Postman API Testing", "Bug Reporting", "Cypress / Playwright Basics"],
+            tags: ["Manual Testing", "Test Case Matrices", "Postman API Testing", "Bug Tracking (Jira)", "Cypress / Playwright Basics"],
             modules: [
                 {
                     week: "Week 01",
-                    title: "Software Testing Foundations & Test Case Design",
-                    desc: "SDLC & STLC lifecycles, boundary value analysis, equivalence partitioning, and writing exhaustive test scenarios."
+                    title: "Testing Foundations, SDLC & STLC Workflows",
+                    desc: "Boundary value analysis, equivalence partitioning, test scenario writing, and smoke/regression test plans."
                 },
                 {
                     week: "Week 02",
-                    title: "Functional & Usability Testing + Jira Bug Tracking",
-                    desc: "Execution of manual test suites, logging reproducible bug reports with steps, severity, and screen recordings."
+                    title: "Functional & Usability Testing + Jira Bug Reporting",
+                    desc: "Manual test execution, writing reproducible bug reports with steps, severity, logs, and video captures."
                 },
                 {
                     week: "Week 03",
-                    title: "REST API Testing with Postman & Newman Automation",
-                    desc: "Writing automated assertion scripts in Postman, testing status codes, payload validations, and auth headers."
+                    title: "Automated REST API Testing with Postman & Newman",
+                    desc: "Writing assertions in JavaScript, status code validation, auth token automation, and CI/CD CLI test runs."
                 },
                 {
                     week: "Week 04",
-                    title: "End-to-End Test Plan & Day-30 Skill Gate Submission",
-                    desc: "Deliver a comprehensive Test Strategy document, test matrices, and automated sanity smoke test suites."
+                    title: "Comprehensive Test Strategy & Gate Deliverable",
+                    desc: "Deliver a complete QA Test Plan, regression test suite, and automated end-to-end sanity smoke scripts."
                 }
             ],
-            squadRole: "You will act as the quality guardian of your squad, testing every PR before merge, maintaining regression checklists, and certifying releases."
+            squadRole: "Act as quality gatekeeper, verify every squad Pull Request before production release, and maintain zero-defect standards."
         },
-        product: {
-            title: "Product & Business Analyst Track",
-            subtitle: "Define product strategy, user stories, PRDs, and Agile sprint backlogs",
-            icon: "fa-chart-pie",
+        ai: {
+            title: "AI-Related Role (AI Engineer / Builder)",
+            subtitle: "Integrate LLMs, AI agents, RAG pipelines & smart automations into web apps",
+            icon: "fa-brain",
             colorClass: "text-cyan-400 bg-cyan-500/10 border-cyan-500/30",
-            tags: ["PRD Writing", "User Stories", "Jira & Trello", "Market Research", "Product Metrics", "Sprint Planning"],
+            tags: ["LLM Integration", "OpenAI & Gemini APIs", "Prompt Engineering", "RAG Pipelines", "Vector Databases", "LangChain / AI Agents"],
             modules: [
                 {
                     week: "Week 01",
-                    title: "Product Thinking & Market Opportunity Assessment",
-                    desc: "Identifying customer pain points, competitor analysis, value proposition canvas, and defining product vision."
+                    title: "Foundations of Generative AI & Prompt Engineering",
+                    desc: "LLM concepts, tokens, system prompting, few-shot prompting, structured JSON outputs, and OpenAI/Gemini API calls."
                 },
                 {
                     week: "Week 02",
-                    title: "Writing Crystal-Clear PRDs & User Stories",
-                    desc: "Drafting Product Requirement Documents (PRDs), acceptance criteria (Given/When/Then), and scope boundary definitions."
+                    title: "Embeddings, Vector Databases & RAG Pipelines",
+                    desc: "Text embeddings, semantic vector search (Pinecone/ChromaDB), document chunking, and Retrieval-Augmented Generation."
                 },
                 {
                     week: "Week 03",
-                    title: "Agile Backlog Grooming, Sprint Cadence & Metrics",
-                    desc: "Story estimation (Story points), sprint planning, tracking velocity, burndown charts, and product KPIs (DAU/MAU)."
+                    title: "AI Agents, Tool Calling & Function Calling",
+                    desc: "Building autonomous agents that use APIs, search tools, calculate results, and perform multi-step workflows."
                 },
                 {
                     week: "Week 04",
-                    title: "Comprehensive Launch Plan Deliverable & Skill Gate",
-                    desc: "Complete launch PRD with wireframe flows, roadmap milestones, and go-to-market strategy presentation."
+                    title: "Production AI Web App Capstone & Gate Evaluation",
+                    desc: "Build an AI-powered copilot or smart document analyzer with streaming UI, vector database, and deployment."
                 }
             ],
-            squadRole: "You will steer the squad's product direction, facilitate Wednesday Agile scrums, unblock teammates, and ensure deliverables meet user needs."
+            squadRole: "Empower squad products with AI features, smart search, automated workflows, and conversational assistant capabilities."
         }
     };
 
@@ -162,12 +192,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('trackContent');
         if (!container) return;
 
-        // Generate tags HTML
         const tagsHtml = track.tags.map(tag => 
             `<span class="text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900 border border-white/5 text-slate-300">${tag}</span>`
         ).join('');
 
-        // Generate modules HTML
         const modulesHtml = track.modules.map(mod => `
             <div class="bg-slate-900/80 p-4 rounded-2xl border border-white/5 hover:border-white/10 transition">
                 <div class="flex items-center justify-between mb-1.5">
@@ -196,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <!-- Skill Stack Badges -->
                 <div class="flex flex-wrap items-center gap-2 mb-8">
-                    <span class="text-xs text-slate-400 mr-1 font-mono uppercase">Key Tools:</span>
+                    <span class="text-xs text-slate-400 mr-1 font-mono uppercase">Key Tools & Skills:</span>
                     ${tagsHtml}
                 </div>
 
@@ -228,7 +256,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. FAQ Accordion Logic
+    // 3. 2-Step Registration System (Google Form -> Unlocks WhatsApp Group)
+    const step1Btn = document.getElementById('step1Btn');
+    const formCheckbox = document.getElementById('formCompletedCheckbox');
+    const step2Btn = document.getElementById('step2Btn');
+    const step2Container = document.getElementById('step2Container');
+    const stepStatusBadge = document.getElementById('stepStatusBadge');
+
+    function unlockStep2() {
+        if (!step2Btn) return;
+        step2Btn.removeAttribute('disabled');
+        step2Btn.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
+        step2Btn.classList.add('animate-pulse', 'bg-gradient-to-r', 'from-emerald-500', 'to-teal-400', 'shadow-emerald-500/30');
+        
+        if (stepStatusBadge) {
+            stepStatusBadge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full"><i class="fa-solid fa-circle-check"></i> Step 1 Complete • Step 2 Unlocked!</span>`;
+        }
+
+        const lockIcon = document.getElementById('step2LockIcon');
+        if (lockIcon) {
+            lockIcon.className = "fab fa-whatsapp text-2xl text-slate-950";
+        }
+
+        const step2Title = document.getElementById('step2Title');
+        if (step2Title) {
+            step2Title.textContent = "Connect on Official WhatsApp Group";
+        }
+    }
+
+    if (step1Btn) {
+        step1Btn.addEventListener('click', () => {
+            // Check the confirmation checkbox automatically once clicked
+            if (formCheckbox) {
+                formCheckbox.checked = true;
+            }
+            unlockStep2();
+        });
+    }
+
+    if (formCheckbox) {
+        formCheckbox.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                unlockStep2();
+            }
+        });
+    }
+
+    // Modal Trigger Buttons (All "Register / Apply Now" buttons open or scroll to the 2-step onboarding section)
+    const registerTriggers = document.querySelectorAll('.open-register-modal');
+    registerTriggers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.getElementById('apply-section');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                targetSection.classList.add('ring-2', 'ring-emerald-500/50');
+                setTimeout(() => targetSection.classList.remove('ring-2', 'ring-emerald-500/50'), 2000);
+            }
+        });
+    });
+
+    // 4. FAQ Accordion Logic
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const btn = item.querySelector('.faq-btn');
@@ -238,7 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const isOpen = item.classList.contains('active');
 
-            // Close all items
             faqItems.forEach(i => {
                 i.classList.remove('active');
                 const a = i.querySelector('.faq-answer');
@@ -248,7 +335,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 i.querySelector('.faq-btn')?.setAttribute('aria-expanded', 'false');
             });
 
-            // If not previously open, open it
             if (!isOpen) {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + "px";
@@ -258,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Mobile Menu Toggle
+    // 5. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -275,7 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking nav links
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -285,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Dynamic Countdown Timer (e.g. 8 days from now)
+    // 6. Dynamic Countdown Timer (8 days)
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 8);
     targetDate.setHours(23, 59, 59, 0);
@@ -323,14 +408,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 6. Scroll to Top Button & Header Shadow
+    // 7. Scroll to Top Button & Header Shadow
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const mainHeader = document.getElementById('mainHeader');
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
-        // Header shadow
         if (mainHeader) {
             if (scrollY > 40) {
                 mainHeader.classList.add('border-b', 'border-white/10', 'shadow-2xl');
@@ -339,7 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Scroll to top visibility
         if (scrollTopBtn) {
             if (scrollY > 500) {
                 scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
