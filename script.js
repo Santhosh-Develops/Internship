@@ -515,34 +515,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Light & Dark Theme Manager
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const themeToggleBtnMobile = document.getElementById('themeToggleBtnMobile');
-
-    function applyTheme(theme) {
-        if (theme === 'light') {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-        }
-    }
-
-    // Initialize with saved theme or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    applyTheme(savedTheme);
-
-    function toggleTheme() {
-        const isDark = document.documentElement.classList.contains('dark');
-        applyTheme(isDark ? 'light' : 'dark');
-    }
-
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
-    }
-    if (themeToggleBtnMobile) {
-        themeToggleBtnMobile.addEventListener('click', toggleTheme);
-    }
+    // 8. Permanent Dark Theme Mode
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
 
 });

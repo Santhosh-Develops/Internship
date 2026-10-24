@@ -1,17 +1,6 @@
-/* Clean & Modern Stylesheet for Iconic Hub with Light & Dark Theme Support */
+/* Clean & Modern Stylesheet for Iconic Hub (Permanent Dark Theme) */
 
 :root {
-    --bg-page: #f8fafc;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --card-border: rgba(226, 232, 240, 0.9);
-    --card-hover-border: rgba(16, 185, 129, 0.4);
-    --text-main: #0f172a;
-    --text-muted: #475569;
-    --primary: #059669;
-    --primary-glow: rgba(16, 185, 129, 0.2);
-}
-
-html.dark {
     --bg-page: #080c14;
     --card-bg: rgba(15, 23, 42, 0.65);
     --card-border: rgba(255, 255, 255, 0.08);
