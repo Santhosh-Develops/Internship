@@ -346,15 +346,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (submitFormAndUnlockBtn) {
         submitFormAndUnlockBtn.addEventListener('click', () => {
-            closeModal();
-            if (formCheckbox) {
-                formCheckbox.checked = true;
+            const successScreen = document.getElementById('formSuccessScreen');
+            if (successScreen) {
+                successScreen.classList.remove('hidden');
             }
-            unlockStep2(true);
-            const targetSection = document.getElementById('apply-section');
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
+
+            // Show animated tick mark confirmation for 1.6s before closing & navigating
+            setTimeout(() => {
+                closeModal();
+                if (successScreen) {
+                    successScreen.classList.add('hidden');
+                }
+                if (formCheckbox) {
+                    formCheckbox.checked = true;
+                }
+                unlockStep2(true);
+                const targetSection = document.getElementById('apply-section');
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 1600);
         });
     }
 
@@ -502,6 +513,36 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+
+    // 8. Light & Dark Theme Manager
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeToggleBtnMobile = document.getElementById('themeToggleBtnMobile');
+
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Initialize with saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        applyTheme(isDark ? 'light' : 'dark');
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+    if (themeToggleBtnMobile) {
+        themeToggleBtnMobile.addEventListener('click', toggleTheme);
     }
 
 });
