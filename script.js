@@ -256,48 +256,112 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. 2-Step Registration System (Google Form -> Unlocks WhatsApp Group)
+    // 3. 2-Step Registration System & Google Form Popup Modal
     const step1Btn = document.getElementById('step1Btn');
     const formCheckbox = document.getElementById('formCompletedCheckbox');
     const step2Btn = document.getElementById('step2Btn');
     const step2Container = document.getElementById('step2Container');
     const stepStatusBadge = document.getElementById('stepStatusBadge');
+    const step2HelperText = document.getElementById('step2HelperText');
+    const step2Badge = document.getElementById('step2Badge');
+    const step2IconBox = document.getElementById('step2IconBox');
+    
+    // Modal Elements
+    const googleFormModal = document.getElementById('googleFormModal');
+    const closeFormModalBtn = document.getElementById('closeFormModalBtn');
+    const submitFormAndUnlockBtn = document.getElementById('submitFormAndUnlockBtn');
+    const whatsappLink = "https://chat.whatsapp.com/GjMw1NF7P1k2wwUnmmqZA7?s=cl&p=a&mlu=4&ilr=4";
 
-    function unlockStep2() {
+    function openModal() {
+        if (!googleFormModal) return;
+        googleFormModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (!googleFormModal) return;
+        googleFormModal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    function unlockStep2(autoRedirect = false) {
         if (!step2Btn) return;
         step2Btn.removeAttribute('disabled');
-        step2Btn.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
-        step2Btn.classList.add('animate-pulse', 'bg-gradient-to-r', 'from-emerald-500', 'to-teal-400', 'shadow-emerald-500/30');
+        step2Btn.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none', 'bg-slate-800', 'text-slate-300');
+        step2Btn.classList.add('animate-pulse', 'bg-gradient-to-r', 'from-emerald-500', 'to-teal-400', 'text-slate-950', 'shadow-emerald-500/35', 'shadow-xl');
         
         if (stepStatusBadge) {
-            stepStatusBadge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full"><i class="fa-solid fa-circle-check"></i> Step 1 Complete • Step 2 Unlocked!</span>`;
+            stepStatusBadge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1 rounded-full"><i class="fa-solid fa-circle-check"></i> Step 1 Complete • Step 2 WhatsApp Unlocked!</span>`;
+        }
+
+        if (step2Badge) {
+            step2Badge.className = "text-xs font-mono font-bold text-slate-950 bg-emerald-400 px-3 py-1 rounded-full";
+            step2Badge.textContent = "STEP 2 • UNLOCKED";
+        }
+
+        if (step2IconBox) {
+            step2IconBox.className = "w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold mb-4";
         }
 
         const lockIcon = document.getElementById('step2LockIcon');
         if (lockIcon) {
-            lockIcon.className = "fab fa-whatsapp text-2xl text-slate-950";
+            lockIcon.className = "fab fa-whatsapp text-2xl text-emerald-400";
         }
 
         const step2Title = document.getElementById('step2Title');
         if (step2Title) {
-            step2Title.textContent = "Connect on Official WhatsApp Group";
+            step2Title.textContent = "Connect to WhatsApp Community";
+        }
+
+        if (step2HelperText) {
+            step2HelperText.innerHTML = `<span class="text-emerald-400 font-semibold">🎉 WhatsApp Group link is active! Click button above to join.</span>`;
+        }
+
+        if (step2Container) {
+            step2Container.classList.add('ring-2', 'ring-emerald-500/50', 'border-emerald-500/40');
+        }
+
+        if (autoRedirect) {
+            window.open(whatsappLink, '_blank');
         }
     }
 
     if (step1Btn) {
         step1Btn.addEventListener('click', () => {
-            // Check the confirmation checkbox automatically once clicked
+            openModal();
+        });
+    }
+
+    if (closeFormModalBtn) {
+        closeFormModalBtn.addEventListener('click', closeModal);
+    }
+
+    if (googleFormModal) {
+        googleFormModal.addEventListener('click', (e) => {
+            if (e.target === googleFormModal) {
+                closeModal();
+            }
+        });
+    }
+
+    if (submitFormAndUnlockBtn) {
+        submitFormAndUnlockBtn.addEventListener('click', () => {
+            closeModal();
             if (formCheckbox) {
                 formCheckbox.checked = true;
             }
-            unlockStep2();
+            unlockStep2(true);
+            const targetSection = document.getElementById('apply-section');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     }
 
     if (formCheckbox) {
         formCheckbox.addEventListener('change', (e) => {
             if (e.target.checked) {
-                unlockStep2();
+                unlockStep2(false);
             }
         });
     }

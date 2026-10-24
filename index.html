@@ -294,26 +294,26 @@
 
                             <h3 class="text-xl font-bold text-white mb-2">Complete Google Form</h3>
                             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                                Fill out your background, preferred role track (Frontend, Backend, Fullstack, UI/UX, Testing, or AI), and technical interests.
+                                Click below to open the application popup form. Enter your background, preferred role track, and contact information.
                             </p>
 
                             <!-- Checkbox confirmation -->
                             <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-white/5 cursor-pointer hover:border-emerald-500/30 transition mb-6">
                                 <input type="checkbox" id="formCompletedCheckbox" class="mt-1 w-4 h-4 rounded text-emerald-500 focus:ring-emerald-400 border-slate-700 bg-slate-800">
                                 <span class="text-xs text-slate-300 leading-normal">
-                                    I have opened & submitted my application details in the Google Form.
+                                    I have filled & submitted my details in the Google Form.
                                 </span>
                             </label>
                         </div>
 
-                        <div>
-                            <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" rel="noopener noreferrer" id="step1Btn" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-white/10 hover:border-emerald-500/30 transition">
-                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                <span>Step 1: Open Google Form & Submit</span>
+                        <div class="space-y-2">
+                            <button type="button" id="step1Btn" class="w-full bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5">
+                                <i class="fa-solid fa-window-restore text-base"></i>
+                                <span>Step 1: Open Application Form (Popup)</span>
+                            </button>
+                            <a href="https://forms.gle/836r8ikahauM9qZ18" target="_blank" rel="noopener noreferrer" class="block text-center text-xs text-slate-400 hover:text-emerald-400 underline transition py-1">
+                                Or open Google Form directly in a new tab &rarr;
                             </a>
-                            <span class="block text-[11px] text-slate-400 text-center mt-2">
-                                Clicking above will also automatically unlock Step 2!
-                            </span>
                         </div>
                     </div>
 
@@ -327,7 +327,7 @@
                                 <span class="text-xs text-slate-400 font-mono">Cohort Community</span>
                             </div>
 
-                            <div class="w-12 h-12 rounded-2xl bg-slate-800/80 border border-white/10 flex items-center justify-center text-slate-400 text-xl font-bold mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800/80 border border-white/10 flex items-center justify-center text-slate-400 text-xl font-bold mb-4" id="step2IconBox">
                                 <i class="fa-solid fa-lock" id="step2LockIcon"></i>
                             </div>
 
@@ -341,18 +341,18 @@
                                     <i class="fa-solid fa-circle-info text-emerald-400"></i>
                                     <span>Gated Entry</span>
                                 </div>
-                                <span>Only applicants who complete the application form are accepted into the cohort.</span>
+                                <span>Complete Step 1 (Google Form) above to unlock your WhatsApp group invitation link.</span>
                             </div>
                         </div>
 
                         <div>
-                            <!-- Step 2 Button (Initially disabled/locked) -->
-                            <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" target="_blank" rel="noopener noreferrer" id="step2Btn" class="w-full opacity-50 cursor-not-allowed pointer-events-none bg-slate-800 text-slate-300 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-white/10 transition shadow-lg">
+                            <!-- Step 2 Button (Initially disabled/locked, unlocks to user's real WhatsApp link) -->
+                            <a href="https://chat.whatsapp.com/GjMw1NF7P1k2wwUnmmqZA7?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" id="step2Btn" class="w-full opacity-50 cursor-not-allowed pointer-events-none bg-slate-800 text-slate-300 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-white/10 transition shadow-lg">
                                 <i class="fab fa-whatsapp text-lg"></i>
                                 <span>Step 2: Connect to WhatsApp Group</span>
                             </a>
-                            <span class="block text-[11px] text-slate-400 text-center mt-2">
-                                Unlocks immediately upon completing Step 1
+                            <span class="block text-[11px] text-slate-400 text-center mt-2" id="step2HelperText">
+                                🔒 Locked until Step 1 Google Form is filled
                             </span>
                         </div>
                     </div>
@@ -1015,6 +1015,63 @@
             </div>
         </div>
     </footer>
+
+    <!-- Google Form Application Popup Modal -->
+    <div id="googleFormModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto transition-all duration-300">
+        <div class="relative w-full max-w-3xl bg-[#0d1424] border border-white/10 rounded-3xl shadow-2xl overflow-hidden my-auto animate-fadeIn flex flex-col max-h-[92vh]">
+            
+            <!-- Modal Header -->
+            <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-slate-900/90">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#080c14] p-1 border border-white/10 flex items-center justify-center overflow-hidden">
+                        <img src="logo.png" alt="Iconic Hub Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="text-white font-extrabold text-sm sm:text-base">Step 1: Iconic Hub Application Form</div>
+                        <div class="text-[11px] text-emerald-400 font-medium">Submit form details below &rarr; unlocks official WhatsApp group</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <a href="https://forms.gle/836r8ikahauM9qZ18" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white px-2.5 py-1.5 rounded-lg border border-white/10 hover:border-white/20 transition hidden sm:inline-flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        <span>Open in New Tab</span>
+                    </a>
+                    <button id="closeFormModalBtn" aria-label="Close modal" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Body with Google Form -->
+            <div class="flex-1 overflow-y-auto p-2 sm:p-4 bg-[#080c14]">
+                <iframe 
+                    id="gFormIframe" 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScSsEiNDAiW7xj-YU2s4qqwxvbv-1oPG5llXui_W5NijzkoSQ/viewform?embedded=true" 
+                    width="100%" 
+                    height="530" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="w-full rounded-xl border border-white/5"
+                    loading="lazy">
+                    Loading Google Form…
+                </iframe>
+            </div>
+
+            <!-- Modal Action Footer -->
+            <div class="p-4 sm:p-5 border-t border-white/10 bg-slate-900/95 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="text-xs text-slate-400 text-center sm:text-left">
+                    <span>Filled in your details? Click below to immediately unlock Step 2 and join WhatsApp!</span>
+                </div>
+                <button id="submitFormAndUnlockBtn" type="button" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-6 py-3 rounded-xl shadow-lg shadow-emerald-500/25 transition transform hover:scale-105 flex items-center justify-center gap-2 text-sm shrink-0">
+                    <i class="fa-solid fa-check-circle text-base"></i>
+                    <span>I Have Submitted Form &rarr; Connect on WhatsApp</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Floating Action Pill (Scrolls to 2-Step Application) -->
     <a href="#apply-section" class="open-register-modal fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white p-4 rounded-full shadow-2xl shadow-[#25D366]/40 flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="Apply for Internship">
