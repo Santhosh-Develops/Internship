@@ -1,12 +1,12 @@
-/* Clean & Modern Stylesheet for Iconic Hub (Permanent Dark Theme) */
+/* Clean & Modern Stylesheet for Iconic Hub (Permanent Light Theme) */
 
 :root {
-    --bg-page: #080c14;
-    --card-bg: rgba(15, 23, 42, 0.65);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --card-hover-border: rgba(16, 185, 129, 0.35);
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
+    --bg-page: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-border: #e2e8f0;
+    --card-hover-border: rgba(16, 185, 129, 0.5);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
     --primary: #10b981;
     --primary-glow: rgba(16, 185, 129, 0.25);
 }
@@ -25,49 +25,39 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Glassmorphism Cards */
+/* Glassmorphism Cards for Light Theme */
 .glass-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
 }
 
 .glass-card:hover {
     border-color: var(--card-hover-border);
-    box-shadow: 0 12px 30px -10px var(--primary-glow);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
 /* Role tab button styles */
 .role-tab {
-    background: #e2e8f0;
+    background: #f1f5f9;
     color: #475569;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-html.dark .role-tab {
-    background: rgba(15, 23, 42, 0.8);
-    color: #94a3b8;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid #e2e8f0;
 }
 
 .role-tab:hover {
-    background: #cbd5e1;
+    background: #e2e8f0;
     color: #0f172a;
-}
-
-html.dark .role-tab:hover {
-    background: rgba(30, 41, 59, 0.8);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: #cbd5e1;
 }
 
 .role-tab.active {
     background: #10b981 !important;
-    color: #04140e !important;
+    color: #ffffff !important;
     border-color: #10b981 !important;
-    box-shadow: 0 6px 20px -4px rgba(16, 185, 129, 0.35);
+    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.35);
 }
 
 /* Custom Scrollbar */
@@ -76,16 +66,12 @@ html.dark .role-tab:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-page);
+    background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #cbd5e1;
     border-radius: 4px;
-}
-
-html.dark ::-webkit-scrollbar-thumb {
-    background: #1e293b;
 }
 
 ::-webkit-scrollbar-thumb:hover {

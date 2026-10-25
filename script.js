@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Frontend Developer",
             subtitle: "Architect blazing-fast, responsive & aesthetic web interfaces",
             icon: "fa-code",
-            colorClass: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+            colorClass: "text-emerald-600 bg-emerald-50 border-emerald-200",
             tags: ["HTML5 & CSS3", "Tailwind CSS", "JavaScript (ES6+)", "React.js", "Next.js", "Git & GitHub PRs"],
             modules: [
                 {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Backend Developer",
             subtitle: "Design scalable REST & GraphQL APIs, secure auth & databases",
             icon: "fa-server",
-            colorClass: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30",
+            colorClass: "text-indigo-600 bg-indigo-50 border-indigo-200",
             tags: ["Node.js / Express", "PostgreSQL / MongoDB", "Prisma ORM", "JWT Authentication", "REST APIs", "Docker Basics"],
             modules: [
                 {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Fullstack Developer",
             subtitle: "Bridge client and server to build complete end-to-end applications",
             icon: "fa-layer-group",
-            colorClass: "text-teal-400 bg-teal-500/10 border-teal-500/30",
+            colorClass: "text-teal-600 bg-teal-50 border-teal-200",
             tags: ["React & Next.js", "Node.js / Express", "PostgreSQL / Prisma", "Server Actions", "Full Auth Flow", "Vercel / Cloud"],
             modules: [
                 {
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "UI / UX Designer",
             subtitle: "Craft intuitive user journeys, wireframes & interactive Figma design systems",
             icon: "fa-pen-ruler",
-            colorClass: "text-pink-400 bg-pink-500/10 border-pink-500/30",
+            colorClass: "text-pink-600 bg-pink-50 border-pink-200",
             tags: ["Figma Design Systems", "Wireframing", "User Research", "Auto-Layout", "Interactive Prototypes", "Dev Handoff"],
             modules: [
                 {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Testing & QA Engineer",
             subtitle: "Guarantee rock-solid reliability through manual & automated testing pipelines",
             icon: "fa-bug-slash",
-            colorClass: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+            colorClass: "text-amber-600 bg-amber-50 border-amber-200",
             tags: ["Manual Testing", "Test Case Matrices", "Postman API Testing", "Bug Tracking (Jira)", "Cypress / Playwright Basics"],
             modules: [
                 {
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "AI-Related Role (AI Engineer / Builder)",
             subtitle: "Integrate LLMs, AI agents, RAG pipelines & smart automations into web apps",
             icon: "fa-brain",
-            colorClass: "text-cyan-400 bg-cyan-500/10 border-cyan-500/30",
+            colorClass: "text-cyan-600 bg-cyan-50 border-cyan-200",
             tags: ["LLM Integration", "OpenAI & Gemini APIs", "Prompt Engineering", "RAG Pipelines", "Vector Databases", "LangChain / AI Agents"],
             modules: [
                 {
@@ -193,17 +193,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container) return;
 
         const tagsHtml = track.tags.map(tag => 
-            `<span class="text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900 border border-white/5 text-slate-300">${tag}</span>`
+            `<span class="text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 font-medium">${tag}</span>`
         ).join('');
 
         const modulesHtml = track.modules.map(mod => `
-            <div class="bg-slate-900/80 p-4 rounded-2xl border border-white/5 hover:border-white/10 transition">
+            <div class="bg-slate-50/80 hover:bg-slate-50 p-4 rounded-2xl border border-slate-200/80 hover:border-emerald-500/40 transition shadow-sm">
                 <div class="flex items-center justify-between mb-1.5">
-                    <span class="text-xs font-mono font-bold text-emerald-400 uppercase">${mod.week}</span>
-                    <i class="fa-solid fa-circle-check text-slate-600 text-xs"></i>
+                    <span class="text-xs font-mono font-bold text-emerald-600 uppercase">${mod.week}</span>
+                    <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
                 </div>
-                <h4 class="text-white font-semibold text-sm mb-1">${mod.title}</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">${mod.desc}</p>
+                <h4 class="text-slate-900 font-semibold text-sm mb-1">${mod.title}</h4>
+                <p class="text-slate-600 text-xs leading-relaxed">${mod.desc}</p>
             </div>
         `).join('');
 
@@ -212,19 +212,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- Track Header -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-2xl ${track.colorClass} border flex items-center justify-center text-2xl font-bold shrink-0">
+                        <div class="w-14 h-14 rounded-2xl ${track.colorClass} border flex items-center justify-center text-2xl font-bold shrink-0 shadow-sm">
                             <i class="fa-solid ${track.icon}"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-extrabold text-white">${track.title}</h3>
-                            <p class="text-slate-400 text-sm mt-0.5">${track.subtitle}</p>
+                            <h3 class="text-2xl font-extrabold text-slate-900">${track.title}</h3>
+                            <p class="text-slate-600 text-sm mt-0.5">${track.subtitle}</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Skill Stack Badges -->
                 <div class="flex flex-wrap items-center gap-2 mb-8">
-                    <span class="text-xs text-slate-400 mr-1 font-mono uppercase">Key Tools & Skills:</span>
+                    <span class="text-xs text-slate-500 mr-1 font-mono uppercase font-semibold">Key Tools & Skills:</span>
                     ${tagsHtml}
                 </div>
 
@@ -234,9 +234,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
 
                 <!-- Squad Responsibility -->
-                <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 text-xs text-slate-300">
-                    <span class="text-emerald-400 font-bold uppercase font-mono">Squad Responsibilities (Phase 2):</span>
-                    <p class="mt-1 text-slate-300">${track.squadRole}</p>
+                <div class="bg-emerald-50/80 p-4 rounded-xl border border-emerald-200/80 text-xs text-slate-700 shadow-sm">
+                    <span class="text-emerald-700 font-bold uppercase font-mono">Squad Responsibilities (Phase 2):</span>
+                    <p class="mt-1 text-slate-700 leading-relaxed">${track.squadRole}</p>
                 </div>
             </div>
         `;
@@ -287,25 +287,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function unlockStep2(autoRedirect = false) {
         if (!step2Btn) return;
         step2Btn.removeAttribute('disabled');
-        step2Btn.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none', 'bg-slate-800', 'text-slate-300');
-        step2Btn.classList.add('animate-pulse', 'bg-gradient-to-r', 'from-emerald-500', 'to-teal-400', 'text-slate-950', 'shadow-emerald-500/35', 'shadow-xl');
+        step2Btn.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none', 'bg-slate-100', 'text-slate-400', 'bg-slate-800', 'text-slate-300');
+        step2Btn.classList.add('bg-gradient-to-r', 'from-emerald-500', 'to-teal-500', 'text-white', 'shadow-emerald-500/35', 'shadow-xl');
         
         if (stepStatusBadge) {
-            stepStatusBadge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1 rounded-full"><i class="fa-solid fa-circle-check"></i> Step 1 Complete • Step 2 WhatsApp Unlocked!</span>`;
+            stepStatusBadge.innerHTML = `<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3.5 py-1 rounded-full"><i class="fa-solid fa-circle-check"></i> Step 1 Complete • Step 2 WhatsApp Unlocked!</span>`;
         }
 
         if (step2Badge) {
-            step2Badge.className = "text-xs font-mono font-bold text-slate-950 bg-emerald-400 px-3 py-1 rounded-full";
+            step2Badge.className = "text-xs font-mono font-bold text-white bg-emerald-600 px-3 py-1 rounded-full";
             step2Badge.textContent = "STEP 2 • UNLOCKED";
         }
 
         if (step2IconBox) {
-            step2IconBox.className = "w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold mb-4";
+            step2IconBox.className = "w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 text-xl font-bold mb-4";
         }
 
         const lockIcon = document.getElementById('step2LockIcon');
         if (lockIcon) {
-            lockIcon.className = "fab fa-whatsapp text-2xl text-emerald-400";
+            lockIcon.className = "fab fa-whatsapp text-2xl text-emerald-600";
         }
 
         const step2Title = document.getElementById('step2Title');
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (step2HelperText) {
-            step2HelperText.innerHTML = `<span class="text-emerald-400 font-semibold">🎉 WhatsApp Group link is active! Click button above to join.</span>`;
+            step2HelperText.innerHTML = `<span class="text-emerald-700 font-semibold">🎉 WhatsApp Group link is active! Click button above to join.</span>`;
         }
 
         if (step2Container) {
@@ -495,9 +495,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (mainHeader) {
             if (scrollY > 40) {
-                mainHeader.classList.add('border-b', 'border-white/10', 'shadow-2xl');
+                mainHeader.classList.add('border-b', 'border-slate-200', 'shadow-md');
             } else {
-                mainHeader.classList.remove('shadow-2xl');
+                mainHeader.classList.remove('shadow-md');
             }
         }
 
@@ -518,8 +518,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Permanent Dark Theme Mode
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
+    // 8. Permanent Light Theme Mode
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
 
 });

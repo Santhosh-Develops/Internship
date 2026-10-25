@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,19 +21,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#080c14',
-                            card: '#0f172a',
-                            border: 'rgba(255, 255, 255, 0.08)',
+                            light: '#f8fafc',
+                            card: '#ffffff',
+                            border: '#e2e8f0',
                             primary: '#10b981',
                             primaryHover: '#059669',
                             secondary: '#6366f1',
                             accent: '#06b6d4',
-                            muted: '#94a3b8'
+                            muted: '#64748b'
                         }
                     },
                     fontFamily: {
@@ -48,89 +47,79 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#080c14] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-900 overflow-x-hidden">
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden">
 
     <!-- Ambient Glowing Background Orbs -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px]"></div>
-        <div class="absolute top-[35%] -left-40 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[140px]"></div>
-        <div class="absolute top-[65%] -right-40 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[160px]"></div>
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-emerald-400/10 rounded-full blur-[140px]"></div>
+        <div class="absolute top-[35%] -left-40 w-[500px] h-[500px] bg-indigo-400/8 rounded-full blur-[140px]"></div>
+        <div class="absolute top-[65%] -right-40 w-[600px] h-[600px] bg-cyan-400/8 rounded-full blur-[160px]"></div>
     </div>
 
     <!-- Top Urgent Batch Announcement Banner -->
-    <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-emerald-600 via-indigo-600 to-emerald-600 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-lg flex items-center justify-center gap-2 flex-wrap">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-white/20 backdrop-blur-sm uppercase tracking-wider font-extrabold animate-pulse">
+    <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-sm flex items-center justify-center gap-2 flex-wrap">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-white/20 backdrop-blur-sm uppercase tracking-wider font-extrabold">
             🔥 Batch 1.0 Deadline: October 31, 2026
         </span>
-        <span>Admissions Open! Only ~7 Days Remaining to Enroll • Remote Work + Continuous 2-Day In-Person Meetup.</span>
+        <span>Admissions Open! ~7 Days Left • <strong>1st Day of Internship: November 2, 2026</strong> • Remote + 2-Day Meetup.</span>
         <a href="#apply-section" class="open-register-modal underline decoration-emerald-200 hover:text-emerald-100 font-bold ml-1 transition">
             Apply Now &rarr;
         </a>
     </aside>
 
     <!-- Navigation Header -->
-    <header class="sticky top-0 z-40 bg-[#080c14]/85 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="mainHeader">
+    <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-slate-200/80 transition-all duration-300" id="mainHeader">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo & Company Name -->
             <a href="#" class="flex items-center gap-3.5 group">
-                <div class="w-12 h-12 rounded-2xl bg-[#0d1424] p-1.5 border border-white/10 shadow-lg shadow-emerald-500/10 group-hover:border-emerald-500/40 transition-all duration-300 transform group-hover:scale-105 flex items-center justify-center overflow-hidden">
+                <div class="w-12 h-12 rounded-2xl bg-slate-100 p-1.5 border border-slate-200 shadow-sm shadow-emerald-500/10 group-hover:border-emerald-500/40 transition-all duration-300 transform group-hover:scale-105 flex items-center justify-center overflow-hidden">
                     <img src="logo.png" alt="Iconic Hub Logo" class="w-full h-full object-contain">
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-emerald-300 transition">Iconic Hub</span>
-                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-emerald-600 transition">Iconic Hub</span>
                     </div>
-                    <span class="text-[11px] text-emerald-400/90 font-medium tracking-wider uppercase flex items-center gap-1">
+                    <span class="text-[11px] text-emerald-600 font-semibold tracking-wider uppercase flex items-center gap-1">
                         Founded & Mentored by Santhosh M
                     </span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-                <a href="#overview" class="hover:text-emerald-400 transition-colors py-1">Overview</a>
-                <a href="#journey" class="hover:text-emerald-400 transition-colors py-1">90-Day Roadmap</a>
-                <a href="#roles" class="hover:text-emerald-400 transition-colors py-1">6 Role Tracks</a>
-                <a href="#routine" class="hover:text-emerald-400 transition-colors py-1">SOD / EOD Timings</a>
-                <a href="#meetup" class="hover:text-emerald-400 transition-colors py-1">2-Day Offline Meet</a>
-                <a href="#pricing" class="hover:text-emerald-400 transition-colors py-1">Pricing</a>
-                <a href="#founder" class="hover:text-emerald-400 transition-colors py-1">Founder</a>
-                <a href="#apply-section" class="hover:text-emerald-400 transition-colors py-1 font-semibold text-emerald-400">Apply</a>
-                <a href="#faq" class="hover:text-emerald-400 transition-colors py-1">FAQ</a>
+            <!-- Desktop Navigation Links (Clean & Minimal 3 Links) -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#journey" class="hover:text-emerald-600 transition-colors py-1">90-Day Roadmap</a>
+                <a href="#roles" class="hover:text-emerald-600 transition-colors py-1">6 Role Tracks</a>
+                <a href="#faq" class="hover:text-emerald-600 transition-colors py-1">FAQ</a>
             </nav>
 
             <!-- Header Action Button -->
             <div class="hidden sm:flex items-center gap-3">
-                <a href="#pricing" class="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-white/10 hover:border-emerald-500/30 transition">
+                <a href="#pricing" class="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-emerald-500/40 bg-slate-50 hover:bg-slate-100 transition">
                     Fee: ₹3,000 Total
                 </a>
-                <a href="#apply-section" class="open-register-modal group relative inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 transition transform hover:-translate-y-0.5">
+                <a href="#apply-section" class="open-register-modal group relative inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/35 transition transform hover:-translate-y-0.5">
                     <i class="fa-solid fa-clipboard-check text-base"></i>
                     <span>Apply (2-Step Process)</span>
                 </a>
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="lg:hidden text-slate-300 hover:text-white p-2 rounded-xl border border-white/10 hover:border-emerald-500/30">
+            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="lg:hidden text-slate-700 hover:text-slate-900 p-2 rounded-xl border border-slate-200 hover:border-emerald-500/30">
                 <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-[#0d1424]/95 backdrop-blur-2xl border-b border-white/10 px-5 pt-3 pb-6 space-y-3">
-            <a href="#overview" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Overview</a>
-            <a href="#journey" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">90-Day Roadmap</a>
-            <a href="#roles" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">6 Role Tracks</a>
-            <a href="#routine" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">SOD / EOD Timings</a>
-            <a href="#meetup" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">2-Day Offline Meet</a>
-            <a href="#pricing" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Pricing</a>
-            <a href="#founder" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium border-b border-white/5">Founder</a>
-            <a href="#apply-section" class="mobile-nav-link block py-2.5 text-emerald-400 hover:text-emerald-300 font-bold border-b border-white/5">Enrollment (2-Step Form)</a>
-            <a href="#faq" class="mobile-nav-link block py-2.5 text-slate-200 hover:text-emerald-400 font-medium">FAQ</a>
+        <div id="mobileMenu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-b border-slate-200 px-5 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#journey" class="mobile-nav-link block py-2.5 text-slate-700 hover:text-emerald-600 font-medium border-b border-slate-100">90-Day Roadmap</a>
+            <a href="#roles" class="mobile-nav-link block py-2.5 text-slate-700 hover:text-emerald-600 font-medium border-b border-slate-100">6 Role Tracks</a>
+            <a href="#faq" class="mobile-nav-link block py-2.5 text-slate-700 hover:text-emerald-600 font-medium border-b border-slate-100">FAQ</a>
             
-            <div class="pt-3">
-                <a href="#apply-section" class="open-register-modal w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25">
+            <div class="pt-3 flex flex-col gap-2">
+                <a href="#pricing" class="mobile-nav-link text-center px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-700 border border-slate-200 bg-slate-50">
+                    Fee: ₹3,000 Total
+                </a>
+                <a href="#apply-section" class="open-register-modal w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md shadow-emerald-500/25">
                     <i class="fa-solid fa-clipboard-check text-lg"></i>
                     <span>Apply Now (2-Step Form)</span>
                 </a>
@@ -145,78 +134,82 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-6">
-                    <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wide shadow-sm">
-                        <i class="fa-solid fa-bolt text-emerald-400"></i>
+                    <div class="inline-flex items-center gap-2.5 bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wide shadow-sm">
+                        <i class="fa-solid fa-bolt text-emerald-600"></i>
                         <span>Iconic Hub • Founded & Mentored by Santhosh M</span>
                     </div>
 
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12] mb-6">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.12] mb-6">
                         Build Real Products in <br class="hidden sm:inline" />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600">
                             Agile Squads
                         </span> With Santhosh M
                     </h1>
 
-                    <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
-                        Founded by <strong class="text-white">Santhosh M</strong> at <span class="text-emerald-400 font-semibold">Iconic Hub</span>. An intensive 90-day internship: master your role across 6 tracks, push production code in Agile squads, and connect in-person during our continuous 2-day offline tech gathering.
+                    <p class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                        Founded by <strong class="text-slate-900">Santhosh M</strong> at <span class="text-emerald-600 font-semibold">Iconic Hub</span>. An intensive 90-day internship: master your role across 6 tracks, push production code in Agile squads, and connect in-person during our continuous 2-day offline tech gathering.
                     </p>
 
                     <!-- Countdown Timer Card -->
-                    <div class="w-full max-w-xl bg-slate-900/60 border border-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-5 mb-10 shadow-2xl">
-                        <div class="text-xs uppercase tracking-widest text-slate-300 font-semibold mb-3 flex items-center justify-center gap-2 flex-wrap text-center">
-                            <i class="fa-regular fa-clock text-emerald-400 animate-pulse"></i>
-                            <span id="deadlineStatusText">Time Limit: <strong class="text-emerald-400 font-extrabold">October 31, 2026</strong> <span class="text-slate-400 font-normal">(~7 Days Remaining)</span></span>
+                    <div class="w-full max-w-xl bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-5 mb-10 shadow-xl shadow-slate-200/50">
+                        <div class="text-xs uppercase tracking-widest text-slate-700 font-semibold mb-3 flex items-center justify-center gap-2 flex-wrap text-center">
+                            <i class="fa-regular fa-clock text-emerald-600"></i>
+                            <span id="deadlineStatusText">Time Limit: <strong class="text-emerald-700 font-extrabold">October 31, 2026</strong> <span class="text-slate-500 font-normal">(~7 Days Remaining)</span></span>
                         </div>
                         <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center font-mono">
-                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400" id="timerDays">06</span>
-                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Days</span>
+                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-600" id="timerDays">06</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-500 uppercase mt-0.5 font-sans font-medium">Days</span>
                             </div>
-                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerHours">16</span>
-                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Hours</span>
+                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900" id="timerHours">16</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-500 uppercase mt-0.5 font-sans font-medium">Hours</span>
                             </div>
-                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerMins">00</span>
-                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Mins</span>
+                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900" id="timerMins">00</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-500 uppercase mt-0.5 font-sans font-medium">Mins</span>
                             </div>
-                            <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-indigo-400" id="timerSecs">00</span>
-                                <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Secs</span>
+                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 sm:p-3">
+                                <span class="text-2xl sm:text-3xl font-extrabold text-indigo-600" id="timerSecs">00</span>
+                                <span class="block text-[10px] sm:text-xs text-slate-500 uppercase mt-0.5 font-sans font-medium">Secs</span>
                             </div>
                         </div>
-                        <div class="mt-3 text-center">
-                            <span class="text-[11px] text-amber-300/90 font-medium flex items-center justify-center gap-1.5">
-                                <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs"></i>
-                                Strict Time Limit: Batch 1.0 applications close October 31, 2026 (11:59 PM IST)
+                        <div class="mt-3 text-center flex flex-col sm:flex-row items-center justify-center gap-2">
+                            <span class="text-[11px] text-amber-800 bg-amber-50 border border-amber-200 px-3 py-1 rounded-lg font-medium inline-flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs"></i>
+                                Application Deadline: October 31, 2026 (11:59 PM IST)
+                            </span>
+                            <span class="text-[11px] text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-lg font-semibold inline-flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-calendar-check text-emerald-600 text-xs"></i>
+                                1st Day of Internship: November 2, 2026
                             </span>
                         </div>
                     </div>
 
                     <!-- Call To Action (Scroll to Journey or Apply) -->
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                        <a href="#journey" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold px-8 py-4 rounded-2xl border border-white/10 hover:border-white/20 transition flex items-center justify-center gap-2 text-base backdrop-blur-md">
+                        <a href="#journey" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-semibold px-8 py-4 rounded-2xl border border-slate-200 hover:border-slate-300 shadow-sm transition flex items-center justify-center gap-2 text-base">
                             <span>Explore 90-Day Roadmap</span>
                             <i class="fa-solid fa-arrow-down text-sm"></i>
                         </a>
-                        <a href="#apply-section" class="open-register-modal w-full sm:w-auto bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-base">
+                        <a href="#apply-section" class="open-register-modal w-full sm:w-auto bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-600 hover:to-teal-600 text-white font-extrabold px-8 py-4 rounded-2xl shadow-lg shadow-emerald-500/25 transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-base">
                             <i class="fa-solid fa-arrow-right-to-bracket text-xl"></i>
                             <span>Enroll Now (2-Step Form)</span>
                         </a>
                     </div>
 
                     <!-- Micro Features Bar -->
-                    <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+                    <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                            <i class="fa-solid fa-check-circle text-emerald-600"></i>
                             <span>6 High-Demand Tech Tracks</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                            <i class="fa-solid fa-check-circle text-emerald-600"></i>
                             <span>Continuous 2-Day In-Person Meetup</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                            <i class="fa-solid fa-check-circle text-emerald-600"></i>
                             <span>Strict SOD/EOD Accountability</span>
                         </div>
                     </div>
@@ -225,40 +218,40 @@
 
                 <!-- 4 Highlight Badges -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/40 transition-all duration-300">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider">Duration</span>
-                            <i class="fa-solid fa-calendar-check text-slate-500 group-hover:text-emerald-400 transition"></i>
+                            <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-wider">Duration</span>
+                            <i class="fa-solid fa-calendar-check text-slate-400 group-hover:text-emerald-600 transition"></i>
                         </div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">90 Days</div>
-                        <div class="text-xs text-slate-400">~13 Weeks Intensive Growth</div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1">90 Days</div>
+                        <div class="text-xs text-slate-500">~13 Weeks Intensive Growth</div>
                     </div>
 
-                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-300">
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-indigo-500/40 transition-all duration-300">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-mono font-semibold text-indigo-400 uppercase tracking-wider">Meetup</span>
-                            <i class="fa-solid fa-users text-slate-500 group-hover:text-indigo-400 transition"></i>
+                            <span class="text-xs font-mono font-bold text-indigo-600 uppercase tracking-wider">Meetup</span>
+                            <i class="fa-solid fa-users text-slate-400 group-hover:text-indigo-600 transition"></i>
                         </div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">2 Full Days</div>
-                        <div class="text-xs text-slate-400">Continuous In-Person Networking</div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1">2 Full Days</div>
+                        <div class="text-xs text-slate-500">Continuous In-Person Networking</div>
                     </div>
 
-                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-teal-500/30 transition-all duration-300">
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-teal-500/40 transition-all duration-300">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-mono font-semibold text-teal-400 uppercase tracking-wider">Discipline</span>
-                            <i class="fa-solid fa-clock text-slate-500 group-hover:text-teal-400 transition"></i>
+                            <span class="text-xs font-mono font-bold text-teal-600 uppercase tracking-wider">Discipline</span>
+                            <i class="fa-solid fa-clock text-slate-400 group-hover:text-teal-600 transition"></i>
                         </div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">SOD & EOD</div>
-                        <div class="text-xs text-slate-400">9 AM SOD • 10 PM-12 AM EOD</div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1">SOD & EOD</div>
+                        <div class="text-xs text-slate-500">9 AM SOD • 10 PM-12 AM EOD</div>
                     </div>
 
-                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="glass-card p-5 rounded-2xl relative overflow-hidden group hover:border-emerald-500/40 transition-all duration-300">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider">Fee</span>
-                            <i class="fa-solid fa-shield-halved text-slate-500 group-hover:text-emerald-400 transition"></i>
+                            <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-wider">Fee</span>
+                            <i class="fa-solid fa-shield-halved text-slate-400 group-hover:text-emerald-600 transition"></i>
                         </div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">₹3,000</div>
-                        <div class="text-xs text-slate-400">All-Inclusive 90 Days (~₹33/day)</div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1">₹3,000</div>
+                        <div class="text-xs text-slate-500">All-Inclusive 90 Days (~₹33/day)</div>
                     </div>
                 </div>
 
@@ -266,17 +259,17 @@
         </section>
 
         <!-- 2. THE 90-DAY TRANSFORMATION ROADMAP (The Big Picture first) -->
-        <section id="journey" class="py-24 bg-[#0a101d] border-t border-b border-white/5 relative">
+        <section id="journey" class="py-24 bg-slate-50 border-t border-b border-slate-200 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    <span class="text-emerald-800 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                         The 90-Day Blueprint
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
                         Your Complete Transformation Journey
                     </h2>
-                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                    <p class="text-slate-600 mt-3 text-base sm:text-lg">
                         Structured to bridge the gap between college theory and real engineering squad execution.
                     </p>
                 </div>
@@ -284,112 +277,117 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
                     <!-- Phase 1 -->
-                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/10 hover:border-indigo-500/40 transition-all duration-300 relative group">
-                        <div class="absolute top-0 right-0 bg-indigo-500/20 text-indigo-300 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-indigo-500/30">
+                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-slate-200 hover:border-indigo-400 transition-all duration-300 relative group bg-white shadow-sm hover:shadow-xl">
+                        <div class="absolute top-0 right-0 bg-indigo-50 text-indigo-700 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-indigo-200">
                             Days 1 - 30
                         </div>
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-semibold">Phase 1</span>
-                            <h3 class="text-2xl font-bold text-white mt-1 mb-3">Role-Based Mastery</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono uppercase tracking-wider text-indigo-600 font-bold">Phase 1</span>
+                                <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
+                                    <i class="fa-solid fa-calendar-day text-emerald-600"></i> Starts Nov 2, 2026
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-1 mb-3">Role-Based Mastery</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
                                 Deep dive into your chosen track with live weekly masterclasses, Git PR practices, and structured rubrics.
                             </p>
                             
-                            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                            <ul class="space-y-3 text-sm text-slate-700 mb-6">
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Weekly live training sessions</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Strict SOD & EOD submission habit</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Day-30 Practical Skill Gate Assessment</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="bg-slate-900/90 p-4 rounded-xl border border-indigo-500/20 text-xs text-indigo-300 font-medium">
+                        <div class="bg-indigo-50/80 p-4 rounded-xl border border-indigo-200 text-xs text-indigo-900 font-medium">
                             🎯 <strong>Milestone:</strong> Score 60+ points to qualify for squad leadership in Phase 2.
                         </div>
                     </div>
 
                     <!-- Phase 2 -->
-                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-emerald-500/30 shadow-xl shadow-emerald-500/5 hover:border-emerald-500/50 transition-all duration-300 relative group">
-                        <div class="absolute -top-3 left-8 bg-emerald-500 text-slate-950 font-bold text-[11px] px-3 py-0.5 rounded-full uppercase tracking-wider">
+                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border-2 border-emerald-500/40 shadow-md hover:shadow-xl hover:border-emerald-500 transition-all duration-300 relative group bg-white">
+                        <div class="absolute -top-3 left-8 bg-emerald-600 text-white font-bold text-[11px] px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
                             Core Squad Engine
                         </div>
-                        <div class="absolute top-0 right-0 bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-emerald-500/30">
+                        <div class="absolute top-0 right-0 bg-emerald-50 text-emerald-800 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-emerald-200">
                             Days 31 - 85
                         </div>
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-users-gear"></i>
                             </div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">Phase 2</span>
-                            <h3 class="text-2xl font-bold text-white mt-1 mb-3">Cross-Functional Squads</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-700 font-bold">Phase 2</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-1 mb-3">Cross-Functional Squads</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
                                 Collaborate in a 5-6 member squad across Frontend, Backend, Fullstack, UI/UX, Testing, and AI to build an enterprise SaaS product.
                             </p>
                             
-                            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                            <ul class="space-y-3 text-sm text-slate-700 mb-6">
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Continuous 2-Day In-Person Offline Meetup</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Wednesday Agile Scrum Meetings</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>GitHub pull request reviews & CI/CD deployment</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-500/20 text-xs text-emerald-300 font-medium">
+                        <div class="bg-emerald-50/80 p-4 rounded-xl border border-emerald-200 text-xs text-emerald-900 font-medium">
                             🚀 <strong>Milestone:</strong> A full-stack, production-deployed web application in your GitHub portfolio.
                         </div>
                     </div>
 
                     <!-- Phase 3 -->
-                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/10 hover:border-cyan-500/40 transition-all duration-300 relative group">
-                        <div class="absolute top-0 right-0 bg-cyan-500/20 text-cyan-300 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-cyan-500/30">
+                    <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-slate-200 hover:border-cyan-500/40 transition-all duration-300 relative group bg-white shadow-sm hover:shadow-xl">
+                        <div class="absolute top-0 right-0 bg-cyan-50 text-cyan-800 font-mono text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl border-l border-b border-cyan-200">
                             Days 86 - 90
                         </div>
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                            <div class="w-14 h-14 rounded-2xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Phase 3</span>
-                            <h3 class="text-2xl font-bold text-white mt-1 mb-3">Demo Day & Certification</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            <span class="text-xs font-mono uppercase tracking-wider text-cyan-700 font-bold">Phase 3</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-1 mb-3">Demo Day & Certification</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
                                 Pitch your live application to an expert panel, receive your verified certificate from Iconic Hub, and join the alumni network.
                             </p>
                             
-                            <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                            <ul class="space-y-3 text-sm text-slate-700 mb-6">
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Live product pitch & tech demonstration</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Verified Certificate of Internship with ID</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                    <i class="fa-solid fa-check text-emerald-600 mt-1 shrink-0"></i>
                                     <span>Recommendation letters for top performers</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-500/20 text-xs text-cyan-300 font-medium">
+                        <div class="bg-cyan-50/80 p-4 rounded-xl border border-cyan-200 text-xs text-cyan-900 font-medium">
                             🏆 <strong>Outcome:</strong> Verified Internship Certificate + Strong Industry Reference Letter.
                         </div>
                     </div>
@@ -400,17 +398,17 @@
         </section>
 
         <!-- 3. 6 HIGH-IMPACT ROLE TRACKS SECTION -->
-        <section id="roles" class="py-24 bg-[#080c14] relative">
+        <section id="roles" class="py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    <span class="text-emerald-800 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                         Choose Your Track
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
                         6 Specialized Tech Roles
                     </h2>
-                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                    <p class="text-slate-600 mt-3 text-base sm:text-lg">
                         Structured curriculum designed for real industry demand. Click each role to view tools, weekly modules, and squad responsibilities.
                     </p>
                 </div>
@@ -444,18 +442,18 @@
                 </div>
 
                 <!-- Dynamic Track Content Box -->
-                <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative overflow-hidden" id="trackCardContainer">
+                <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl relative overflow-hidden bg-white" id="trackCardContainer">
                     <div id="trackContent">
                         <!-- Populated by JavaScript -->
                     </div>
 
                     <!-- Bottom Bar of Track Card -->
-                    <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div class="flex items-center gap-2 text-xs text-slate-400">
-                            <i class="fa-solid fa-shield-check text-emerald-400"></i>
+                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fa-solid fa-shield-check text-emerald-600"></i>
                             <span>Weekly Code Reviews, Assessment Rubrics & Mentorship</span>
                         </div>
-                        <a href="#apply-section" class="open-register-modal w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm text-center transition">
+                        <a href="#apply-section" class="open-register-modal w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-2.5 rounded-xl text-sm text-center shadow-md shadow-emerald-500/20 transition">
                             Apply for This Track &rarr;
                         </a>
                     </div>
@@ -465,17 +463,17 @@
         </section>
 
         <!-- 4. SOD & EOD DAILY TIMINGS -->
-        <section id="routine" class="py-24 bg-[#0a101d] border-t border-white/5 relative">
+        <section id="routine" class="py-24 bg-slate-50 border-t border-slate-200 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    <span class="text-emerald-800 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                         Daily Operational Discipline
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
                         SOD & EOD Daily Routine
                     </h2>
-                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                    <p class="text-slate-600 mt-3 text-base sm:text-lg">
                         Engineering companies run on reliable cadence. At Iconic Hub, we practice structured morning planning and nighttime proof submissions.
                     </p>
                 </div>
@@ -483,52 +481,52 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     
                     <!-- SOD -->
-                    <div class="glass-card p-8 rounded-3xl border border-white/10 relative hover:border-emerald-500/30 transition">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md relative hover:border-emerald-500/40 transition bg-white">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">
+                            <span class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
                                 Morning SOD
                             </span>
-                            <span class="text-xs text-emerald-300 font-mono font-bold">9:00 AM – 10:00 AM</span>
+                            <span class="text-xs text-emerald-700 font-mono font-bold">9:00 AM – 10:00 AM</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Start-of-Day (SOD) Commitment</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Start-of-Day (SOD) Commitment</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
                             Every morning between 9:00 AM and 10:00 AM, submit your daily plan: 2 to 5 targeted tasks, estimated completion hours, and any blockers needing mentor help.
                         </p>
-                        <div class="text-xs text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-white/5 font-mono">
+                        <div class="text-xs text-slate-800 bg-slate-100 p-3 rounded-xl border border-slate-200 font-mono">
                             <code>&gt; SOD (9:15 AM): Implement JWT auth middleware + unit tests</code>
                         </div>
                     </div>
 
                     <!-- Core Sprint -->
-                    <div class="glass-card p-8 rounded-3xl border border-white/10 relative hover:border-indigo-500/30 transition">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md relative hover:border-indigo-500/40 transition bg-white">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono font-bold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">
+                            <span class="text-xs font-mono font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full">
                                 Flexible Execution
                             </span>
-                            <span class="text-xs text-indigo-300 font-mono font-bold">4 Hours Core Focus</span>
+                            <span class="text-xs text-indigo-700 font-mono font-bold">4 Hours Core Focus</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Focused Build & Code Reviews</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Focused Build & Code Reviews</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
                             Spend 4 dedicated hours building features, pushing code to GitHub branches, reviewing squad pull requests, and brainstorming with peers.
                         </p>
-                        <div class="text-xs text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-white/5 font-mono">
+                        <div class="text-xs text-slate-800 bg-slate-100 p-3 rounded-xl border border-slate-200 font-mono">
                             <code>&gt; git push origin feature/api-endpoints</code>
                         </div>
                     </div>
 
                     <!-- EOD -->
-                    <div class="glass-card p-8 rounded-3xl border border-white/10 relative hover:border-teal-500/30 transition">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md relative hover:border-teal-500/40 transition bg-white">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono font-bold text-teal-400 bg-teal-500/10 px-3 py-1 rounded-full">
+                            <span class="text-xs font-mono font-bold text-teal-700 bg-teal-50 border border-teal-200 px-3 py-1 rounded-full">
                                 Night EOD
                             </span>
-                            <span class="text-xs text-teal-300 font-mono font-bold">10:00 PM – 12:00 AM</span>
+                            <span class="text-xs text-teal-700 font-mono font-bold">10:00 PM – 12:00 AM</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">End-of-Day (EOD) Proof</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">End-of-Day (EOD) Proof</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
                             Between 10:00 PM and midnight (12:00 AM), submit your EOD report detailing task completion percentages and verifiable links (GitHub PRs, live URLs, or Figma boards).
                         </p>
-                        <div class="text-xs text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-white/5 font-mono">
+                        <div class="text-xs text-slate-800 bg-slate-100 p-3 rounded-xl border border-slate-200 font-mono">
                             <code>&gt; EOD (10:45 PM): PR #14 merged • 100% completed with proof</code>
                         </div>
                     </div>
@@ -536,25 +534,25 @@
                 </div>
 
                 <!-- Wednesday Agile Scrum Call -->
-                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-indigo-500/30 bg-gradient-to-r from-indigo-950/40 via-slate-900/90 to-emerald-950/30 relative overflow-hidden shadow-2xl">
+                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-indigo-200 bg-gradient-to-r from-indigo-50/70 via-white to-emerald-50/70 relative overflow-hidden shadow-lg">
                     <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
                         <div class="space-y-3">
-                            <div class="inline-flex items-center gap-2 text-indigo-400 font-mono text-xs font-semibold uppercase tracking-wider bg-indigo-500/10 px-3 py-1 rounded-full">
+                            <div class="inline-flex items-center gap-2 text-indigo-700 font-mono text-xs font-semibold uppercase tracking-wider bg-indigo-100/70 px-3 py-1 rounded-full">
                                 <i class="fa-solid fa-users"></i>
                                 <span>Weekly Cohort Sync</span>
                             </div>
-                            <h3 class="text-2xl sm:text-3xl font-bold text-white">
+                            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">
                                 Wednesday Agile Scrum Meeting (45 Minutes)
                             </h3>
-                            <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
+                            <p class="text-slate-600 text-sm max-w-2xl leading-relaxed">
                                 Every Wednesday evening, the entire cohort meets on Google Meet. Each squad presents a 2-minute progress update, tackles technical bottlenecks with Santhosh M, and sets sprint goals.
                             </p>
                         </div>
                         
-                        <div class="shrink-0 text-center bg-slate-900/90 p-5 rounded-2xl border border-white/10 w-full lg:w-auto">
-                            <span class="text-xs text-slate-400 uppercase font-mono block mb-1">Weekly Call Time</span>
-                            <div class="text-xl font-extrabold text-white">Wednesdays @ 7:00 PM</div>
-                            <span class="text-xs text-emerald-400 font-medium mt-1 block">Live Google Meet Call</span>
+                        <div class="shrink-0 text-center bg-white p-5 rounded-2xl border border-slate-200 shadow-sm w-full lg:w-auto">
+                            <span class="text-xs text-slate-500 uppercase font-mono block mb-1">Weekly Call Time</span>
+                            <div class="text-xl font-extrabold text-slate-900">Wednesdays @ 7:00 PM</div>
+                            <span class="text-xs text-emerald-600 font-medium mt-1 block">Live Google Meet Call</span>
                         </div>
                     </div>
                 </div>
@@ -563,79 +561,79 @@
         </section>
 
         <!-- 5. CONTINUOUS 2-DAY IN-PERSON OFFLINE MEETUP -->
-        <section id="meetup" class="py-24 bg-[#080c14] border-t border-white/5 relative">
+        <section id="meetup" class="py-24 bg-white border-t border-slate-200 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                        <span class="text-emerald-800 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                             In-Person Connection
                         </span>
-                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 mb-6 tracking-tight leading-tight">
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 mb-6 tracking-tight leading-tight">
                             Continuous 2-Day <br />
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600">
                                 In-Person Offline Gathering
                             </span>
                         </h2>
-                        <p class="text-slate-300 text-base leading-relaxed mb-6">
-                            Scheduled between <strong>Day 31 and Day 90</strong>, this is not a boring lecture. It's an energetic <strong>continuous 2-day tech gathering</strong> designed to build strong friendships, whiteboard architectures, and make lifelong professional connections.
+                        <p class="text-slate-600 text-base leading-relaxed mb-6">
+                            Scheduled between <strong class="text-slate-900">Day 31 and Day 90</strong>, this is not a boring lecture. It's an energetic <strong class="text-slate-900">continuous 2-day tech gathering</strong> designed to build strong friendships, whiteboard architectures, and make lifelong professional connections.
                         </p>
 
                         <div class="space-y-4 mb-8">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+                                <div class="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0 mt-0.5">
                                     <i class="fa-solid fa-network-wired text-sm"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-bold text-sm">Build Genuine Tech Networks</h4>
-                                    <p class="text-slate-400 text-xs mt-0.5">Meet your fellow frontend, backend, fullstack, AI, and design teammates face-to-face in a friendly, collaborative environment.</p>
+                                    <h4 class="text-slate-900 font-bold text-sm">Build Genuine Tech Networks</h4>
+                                    <p class="text-slate-600 text-xs mt-0.5">Meet your fellow frontend, backend, fullstack, AI, and design teammates face-to-face in a friendly, collaborative environment.</p>
                                 </div>
                             </div>
 
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0 mt-0.5">
+                                <div class="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 shrink-0 mt-0.5">
                                     <i class="fa-solid fa-laptop-code text-sm"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-bold text-sm">Whiteboard System Design & Code Jam</h4>
-                                    <p class="text-slate-400 text-xs mt-0.5">Sketch database schemas on physical whiteboards, debug complex PRs together, and elevate your engineering mindset.</p>
+                                    <h4 class="text-slate-900 font-bold text-sm">Whiteboard System Design & Code Jam</h4>
+                                    <p class="text-slate-600 text-xs mt-0.5">Sketch database schemas on physical whiteboards, debug complex PRs together, and elevate your engineering mindset.</p>
                                 </div>
                             </div>
 
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0 mt-0.5">
+                                <div class="w-8 h-8 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 shrink-0 mt-0.5">
                                     <i class="fa-solid fa-comments text-sm"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-bold text-sm">1-on-1 Mentorship With Santhosh M</h4>
-                                    <p class="text-slate-400 text-xs mt-0.5">Sit down directly with Founder Santhosh M for personal career reviews, resume audits, and portfolio critiques.</p>
+                                    <h4 class="text-slate-900 font-bold text-sm">1-on-1 Mentorship With Santhosh M</h4>
+                                    <p class="text-slate-600 text-xs mt-0.5">Sit down directly with Founder Santhosh M for personal career reviews, resume audits, and portfolio critiques.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="inline-flex items-center gap-2 text-xs text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-xl">
-                            <i class="fa-solid fa-calendar-days text-emerald-400"></i>
+                        <div class="inline-flex items-center gap-2 text-xs text-emerald-800 bg-emerald-50 border border-emerald-200 px-4 py-2 rounded-xl">
+                            <i class="fa-solid fa-calendar-days text-emerald-600"></i>
                             <span>Timing: Scheduled between Day 31 – Day 90 (Continuous 2 Days in India)</span>
                         </div>
                     </div>
 
                     <!-- Offline Meetup Photograph Showcase -->
                     <div class="relative">
-                        <div class="absolute -inset-1.5 bg-gradient-to-r from-emerald-500 to-indigo-600 rounded-3xl blur-xl opacity-30"></div>
-                        <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-emerald-400 to-indigo-400 rounded-3xl blur-xl opacity-20"></div>
+                        <div class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl group">
                             <img src="offline-meetup.jpg" alt="Iconic Hub Tech Meetup & Collaborative Gathering" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
                             
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#080c14] via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-90"></div>
                             
-                            <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-white/10 text-xs">
-                                <div class="flex items-center justify-between text-white font-bold mb-1">
-                                    <span class="flex items-center gap-1.5 text-emerald-400">
+                            <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 text-xs shadow-lg">
+                                <div class="flex items-center justify-between text-slate-900 font-bold mb-1">
+                                    <span class="flex items-center gap-1.5 text-emerald-600">
                                         <i class="fa-solid fa-users"></i>
                                         <span>Iconic Hub Tech Gathering</span>
                                     </span>
-                                    <span class="text-slate-400 font-mono text-[11px]">2 Full Days</span>
+                                    <span class="text-slate-500 font-mono text-[11px]">2 Full Days</span>
                                 </div>
-                                <p class="text-slate-300 text-[11px] leading-relaxed">
+                                <p class="text-slate-600 text-[11px] leading-relaxed">
                                     "A high-energy, friendly gathering of passionate developers collaborating on code, architectures, and real friendships."
                                 </p>
                             </div>
@@ -647,82 +645,82 @@
         </section>
 
         <!-- 6. PROGRAM FEE & TRANSPARENCY -->
-        <section id="pricing" class="py-24 bg-[#0a101d] border-t border-white/5 relative">
+        <section id="pricing" class="py-24 bg-slate-50 border-t border-slate-200 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    <span class="text-emerald-800 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                         Honest & Transparent
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
                         One Simple Fee. No Hidden Costs.
                     </h2>
-                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                    <p class="text-slate-600 mt-3 text-base sm:text-lg">
                         Iconic Hub provides quality mentorship at an accessible price point for students and aspiring engineers.
                     </p>
                 </div>
 
-                <div class="max-w-3xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border border-emerald-500/30 relative shadow-2xl">
-                    <div class="absolute -top-3 right-8 bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                <div class="max-w-3xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border-2 border-emerald-500/30 relative shadow-xl bg-white">
+                    <div class="absolute -top-3 right-8 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
                         All-Inclusive 90 Days
                     </div>
 
-                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-8 border-b border-white/10">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-8 border-b border-slate-200">
                         <div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">Total Program Fee</span>
-                            <div class="text-5xl sm:text-6xl font-black text-white mt-1">
+                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-700 font-semibold">Total Program Fee</span>
+                            <div class="text-5xl sm:text-6xl font-black text-slate-900 mt-1">
                                 ₹3,000
-                                <span class="text-sm font-normal text-slate-400">/ 90 Days</span>
+                                <span class="text-sm font-normal text-slate-500">/ 90 Days</span>
                             </div>
-                            <span class="text-xs text-slate-400 mt-1 block">That's just <strong>₹33 per day</strong> for complete guidance & mentorship</span>
+                            <span class="text-xs text-slate-600 mt-1 block">That's just <strong class="text-slate-900">₹33 per day</strong> for complete guidance & mentorship</span>
                         </div>
                         <div class="sm:text-right">
-                            <span class="inline-block bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 px-3 py-1.5 rounded-xl text-xs font-semibold">
+                            <span class="inline-block bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1.5 rounded-xl text-xs font-semibold">
                                 ✓ Verified by Iconic Hub
                             </span>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-8 border-b border-white/10 text-sm text-slate-200">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-8 border-b border-slate-200 text-sm text-slate-700">
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>4 Masterclasses & Practical Coding Rubrics</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>Placement in 5-6 Member Agile Squads</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>Real GitHub Repos & Pull Request Reviews</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>Wednesday Agile Scrum Calls</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>Continuous 2-Day In-Person Meetup in India</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>100-Point Verified Certificate with ID</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>Direct Guidance with Santhosh M</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base shrink-0"></i>
                             <span>Recommendation Letter for Top Performers</span>
                         </div>
                     </div>
 
                     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-                        <div class="text-xs text-slate-400 text-center sm:text-left">
+                        <div class="text-xs text-slate-500 text-center sm:text-left">
                             📝 First complete Step 1 (Google Application Form), then join the official WhatsApp group for fee clearance via UPI.
                         </div>
-                        <a href="#apply-section" class="open-register-modal w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 shrink-0">
+                        <a href="#apply-section" class="open-register-modal w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-extrabold px-8 py-4 rounded-2xl shadow-lg shadow-emerald-500/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 shrink-0">
                             <i class="fa-solid fa-clipboard-check text-xl"></i>
                             <span>Complete 2-Step Application</span>
                         </a>
@@ -733,42 +731,42 @@
         </section>
 
         <!-- 7. MEET THE FOUNDER & LEAD MENTOR (Santhosh M) -->
-        <section id="founder" class="py-24 bg-[#080c14] border-t border-white/5 relative">
+        <section id="founder" class="py-24 bg-white border-t border-slate-200 relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10 relative overflow-hidden flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-200 relative overflow-hidden flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white shadow-xl">
                     
                     <!-- Avatar / Portrait Image with Safe Relative Path -->
                     <div class="shrink-0 text-center">
-                        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 p-1 shadow-2xl shadow-emerald-500/25 mx-auto overflow-hidden">
+                        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 p-1 shadow-xl shadow-emerald-500/15 mx-auto overflow-hidden">
                             <img src="Santhosh.png" alt="Santhosh M - Founder & Lead Mentor at Iconic Hub" class="w-full h-full object-cover object-top rounded-[22px]">
                         </div>
-                        <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <div class="mt-3 inline-flex items-center gap-1.5 text-xs text-emerald-700 font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                             <span>Founder & Lead Mentor</span>
                         </div>
                     </div>
 
                     <!-- Bio -->
                     <div class="space-y-4 text-center md:text-left">
-                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold bg-emerald-500/10 px-3 py-1 rounded-full">
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-800 font-semibold bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
                             <span>Founder, Iconic Hub</span>
                         </div>
-                        <h3 class="text-3xl font-extrabold text-white">Santhosh M</h3>
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                            "I founded <strong>Iconic Hub</strong> with a clear mission: to eliminate the disconnect between college learning and real industry execution. Most students struggle not from a lack of potential, but because they have never experienced how high-performing software engineering squads operate. At Iconic Hub, you build real software in Agile squads, follow strict SOD/EOD routines, and connect in-person during our continuous 2-day offline meetup to emerge with proof-of-work that recruiters notice."
+                        <h3 class="text-3xl font-extrabold text-slate-900">Santhosh M</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            "I founded <strong class="text-slate-900">Iconic Hub</strong> with a clear mission: to eliminate the disconnect between college learning and real industry execution. Most students struggle not from a lack of potential, but because they have never experienced how high-performing software engineering squads operate. At Iconic Hub, you build real software in Agile squads, follow strict SOD/EOD routines, and connect in-person during our continuous 2-day offline meetup to emerge with proof-of-work that recruiters notice."
                         </p>
                         <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                            <div class="bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-700 font-medium">
                                 👑 <strong>Founder, Iconic Hub</strong>
                             </div>
-                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                            <div class="bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-700 font-medium">
                                 🚀 <strong>100% Practical Mentorship</strong>
                             </div>
-                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                            <div class="bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-700 font-medium">
                                 🤝 <strong>Real Team Dynamics</strong>
                             </div>
-                            <div class="bg-slate-900/80 border border-white/5 px-3 py-1.5 rounded-xl text-xs text-slate-300">
+                            <div class="bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-700 font-medium">
                                 📍 <strong>2-Day In-Person Meetup</strong>
                             </div>
                         </div>
@@ -780,27 +778,30 @@
         </section>
 
         <!-- 8. ENROLLMENT PROCESS (2-STEP REGISTRATION: Placed after user learns all the information) -->
-        <section id="apply-section" class="py-24 bg-[#0a101d] border-t border-b border-white/5 relative">
+        <section id="apply-section" class="py-24 bg-slate-50 border-t border-b border-slate-200 relative">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    <span class="text-emerald-700 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                         Enrollment Process
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
                         Ready to Join? 2-Step Registration
                     </h2>
-                    <p class="text-slate-400 mt-3 text-sm sm:text-base">
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">
                         To maintain high cohort quality, every applicant first completes our Google Application Form. Once submitted, the official WhatsApp community link is unlocked!
                     </p>
                     <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5">
                         <div id="stepStatusBadge">
-                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full">
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
                                 <i class="fa-solid fa-lock text-xs"></i> Complete Step 1 below to unlock Step 2
                             </span>
                         </div>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-rose-300 bg-rose-500/10 border border-rose-500/25 px-3 py-1 rounded-full">
-                            <i class="fa-solid fa-hourglass-half text-rose-400"></i> Time Limit: October 31, 2026 (~7 Days Left)
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-3 py-1 rounded-full">
+                            <i class="fa-solid fa-hourglass-half text-rose-600"></i> Time Limit: October 31, 2026 (~7 Days Left)
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+                            <i class="fa-solid fa-rocket text-emerald-600"></i> 1st Day of Internship: November 2, 2026
                         </span>
                     </div>
                 </div>
@@ -808,66 +809,66 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     
                     <!-- STEP 1: Google Form Application -->
-                    <div class="glass-card rounded-3xl p-7 sm:p-8 border border-white/10 relative flex flex-col justify-between hover:border-emerald-500/30 transition">
+                    <div class="glass-card rounded-3xl p-7 sm:p-8 border border-slate-200 bg-white relative flex flex-col justify-between hover:border-emerald-500/40 shadow-sm transition">
                         <div>
                             <div class="flex items-center justify-between mb-4">
-                                <span class="text-xs font-mono font-bold text-white bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30">
+                                <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                                     STEP 1 • Mandatory
                                 </span>
-                                <span class="text-xs text-slate-400 font-mono">Takes ~2 Mins</span>
+                                <span class="text-xs text-slate-500 font-mono">Takes ~2 Mins</span>
                             </div>
 
-                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl font-bold mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 text-xl font-bold mb-4">
                                 <i class="fa-solid fa-file-pen"></i>
                             </div>
 
-                            <h3 class="text-xl font-bold text-white mb-2">Complete Google Form</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Complete Google Form</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
                                 Click below to open the application popup form. Enter your background, preferred role track, and contact information.
                             </p>
 
                             <!-- Checkbox confirmation -->
-                            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-white/5 cursor-pointer hover:border-emerald-500/30 transition mb-6">
-                                <input type="checkbox" id="formCompletedCheckbox" class="mt-1 w-4 h-4 rounded text-emerald-500 focus:ring-emerald-400 border-slate-700 bg-slate-800">
-                                <span class="text-xs text-slate-300 leading-normal">
+                            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 cursor-pointer hover:border-emerald-500/30 transition mb-6">
+                                <input type="checkbox" id="formCompletedCheckbox" class="mt-1 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-400 border-slate-300 bg-white">
+                                <span class="text-xs text-slate-700 leading-normal">
                                     I have filled & submitted my details in the Google Form.
                                 </span>
                             </label>
                         </div>
 
                         <div class="space-y-2">
-                            <button type="button" id="step1Btn" class="w-full bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5">
+                            <button type="button" id="step1Btn" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5">
                                 <i class="fa-solid fa-window-restore text-base"></i>
                                 <span>Step 1: Open Application Form (Popup)</span>
                             </button>
-                            <a href="https://forms.gle/836r8ikahauM9qZ18" target="_blank" rel="noopener noreferrer" class="block text-center text-xs text-slate-400 hover:text-emerald-400 underline transition py-1">
+                            <a href="https://forms.gle/836r8ikahauM9qZ18" target="_blank" rel="noopener noreferrer" class="block text-center text-xs text-slate-500 hover:text-emerald-600 underline transition py-1">
                                 Or open Google Form directly in a new tab &rarr;
                             </a>
                         </div>
                     </div>
 
                     <!-- STEP 2: WhatsApp Community Group (Unlocked dynamically) -->
-                    <div id="step2Container" class="glass-card rounded-3xl p-7 sm:p-8 border border-white/10 relative flex flex-col justify-between transition-all duration-300">
+                    <div id="step2Container" class="glass-card rounded-3xl p-7 sm:p-8 border border-slate-200 bg-white relative flex flex-col justify-between shadow-sm transition-all duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
-                                <span class="text-xs font-mono font-bold text-slate-300 bg-slate-800 px-3 py-1 rounded-full border border-white/10" id="step2Badge">
+                                <span class="text-xs font-mono font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full border border-slate-200" id="step2Badge">
                                     STEP 2 • WhatsApp Link
                                 </span>
-                                <span class="text-xs text-slate-400 font-mono">Cohort Community</span>
+                                <span class="text-xs text-slate-500 font-mono">Cohort Community</span>
                             </div>
 
-                            <div class="w-12 h-12 rounded-2xl bg-slate-800/80 border border-white/10 flex items-center justify-center text-slate-400 text-xl font-bold mb-4" id="step2IconBox">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-400 text-xl font-bold mb-4" id="step2IconBox">
                                 <i class="fa-solid fa-lock" id="step2LockIcon"></i>
                             </div>
 
-                            <h3 class="text-xl font-bold text-white mb-2" id="step2Title">Connect on WhatsApp</h3>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" id="step2Title">Connect on WhatsApp</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
                                 Join the official <strong>Iconic Hub</strong> batch group for direct communication with Founder Santhosh M, orientation schedule, and cohort onboarding.
                             </p>
 
-                            <div class="bg-slate-900/80 p-3.5 rounded-xl border border-white/5 text-xs text-slate-400 mb-6">
-                                <div class="flex items-center gap-2 text-slate-300 font-semibold mb-1">
-                                    <i class="fa-solid fa-circle-info text-emerald-400"></i>
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600 mb-6">
+                                <div class="flex items-center gap-2 text-slate-800 font-semibold mb-1">
+                                    <i class="fa-solid fa-circle-info text-emerald-600"></i>
                                     <span>Gated Entry</span>
                                 </div>
                                 <span>Complete Step 1 (Google Form) above to unlock your WhatsApp group invitation link.</span>
@@ -876,11 +877,11 @@
 
                         <div>
                             <!-- Step 2 Button (Initially disabled/locked, unlocks to user's real WhatsApp link) -->
-                            <a href="https://chat.whatsapp.com/IjVGNhgbQRR4GgaFQhS05G" target="_blank" rel="noopener noreferrer" id="step2Btn" class="w-full opacity-50 cursor-not-allowed pointer-events-none bg-slate-800 text-slate-300 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-white/10 transition shadow-lg">
+                            <a href="https://chat.whatsapp.com/IjVGNhgbQRR4GgaFQhS05G" target="_blank" rel="noopener noreferrer" id="step2Btn" class="w-full opacity-50 cursor-not-allowed pointer-events-none bg-slate-100 text-slate-400 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 border border-slate-200 transition shadow-sm">
                                 <i class="fab fa-whatsapp text-lg"></i>
                                 <span>Step 2: Connect to WhatsApp Group</span>
                             </a>
-                            <span class="block text-[11px] text-slate-400 text-center mt-2" id="step2HelperText">
+                            <span class="block text-[11px] text-slate-500 text-center mt-2" id="step2HelperText">
                                 🔒 Locked until Step 1 Google Form is filled
                             </span>
                         </div>
@@ -892,78 +893,78 @@
         </section>
 
         <!-- 9. FREQUENTLY ASKED QUESTIONS SECTION -->
-        <section id="faq" class="py-24 bg-[#080c14] border-t border-white/5 relative">
+        <section id="faq" class="py-24 bg-white border-t border-slate-200 relative">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center mb-16">
-                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    <span class="text-emerald-700 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
                         Got Questions?
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
                         Frequently Asked Questions
                     </h2>
-                    <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                    <p class="text-slate-600 mt-3 text-base sm:text-lg">
                         Everything you need to know about joining Iconic Hub's 90-day internship.
                     </p>
                 </div>
 
                 <div class="space-y-4" id="faqAccordion">
                     
-                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
-                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                    <div class="faq-item glass-card rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:border-emerald-500/40 transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-emerald-600 transition" aria-expanded="false">
                             <span class="text-base sm:text-lg">What is the application deadline / time limit for Batch 1.0?</span>
                             <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
-                            <div class="pb-5 pt-1 border-t border-white/5">
-                                The strict time limit to apply for Batch 1.0 is <strong>October 31, 2026 at 11:59 PM IST</strong> (~7 days remaining). Admissions will close promptly at the deadline to finalize agile squads, assign project repositories, and distribute orientation kits.
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-600 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-slate-100">
+                                The strict time limit to apply for Batch 1.0 is <strong>October 31, 2026 at 11:59 PM IST</strong> (~7 days remaining). Admissions will close promptly at the deadline to finalize agile squads, assign project repositories, and distribute orientation kits. <strong>The 1st day of the internship officially kicks off on November 2, 2026!</strong>
                             </div>
                         </div>
                     </div>
 
-                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
-                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                    <div class="faq-item glass-card rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:border-emerald-500/40 transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-emerald-600 transition" aria-expanded="false">
                             <span class="text-base sm:text-lg">How does the 2-Step Registration work?</span>
                             <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
-                            <div class="pb-5 pt-1 border-t border-white/5">
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-600 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-slate-100">
                                 First, click on "Step 1: Open Application Form (Popup)" in the enrollment section to fill out your role preference and details. Once you submit the form, a confirmation screen with an animated tick mark appears, and Step 2 automatically unlocks on this website, connecting you directly to the official Iconic Hub WhatsApp community group!
                             </div>
                         </div>
                     </div>
 
-                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
-                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                    <div class="faq-item glass-card rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:border-emerald-500/40 transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-emerald-600 transition" aria-expanded="false">
                             <span class="text-base sm:text-lg">What are the SOD and EOD timings?</span>
                             <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
-                            <div class="pb-5 pt-1 border-t border-white/5">
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-600 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-slate-100">
                                 Start-of-Day (SOD) plans are posted every weekday morning between <strong>9:00 AM and 10:00 AM IST</strong>, specifying your planned tasks. End-of-Day (EOD) reports are submitted at night between <strong>10:00 PM and 12:00 AM (Midnight) IST</strong> with verifiable proof links (GitHub Pull Requests, live URLs, or Figma boards).
                             </div>
                         </div>
                     </div>
 
-                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
-                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                    <div class="faq-item glass-card rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:border-emerald-500/40 transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-emerald-600 transition" aria-expanded="false">
                             <span class="text-base sm:text-lg">When and where is the continuous 2-day offline meetup?</span>
                             <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
-                            <div class="pb-5 pt-1 border-t border-white/5">
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-600 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-slate-100">
                                 The continuous 2-day in-person meetup takes place between Day 31 and Day 90 in India. It brings all squads together for networking, system architecture whiteboarding, code jams, and 1-on-1 mentorship with Founder Santhosh M. If travel is impossible due to distant state location, a live virtual feed is arranged.
                             </div>
                         </div>
                     </div>
 
-                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
-                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                    <div class="faq-item glass-card rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:border-emerald-500/40 transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-emerald-600 transition" aria-expanded="false">
                             <span class="text-base sm:text-lg">Can I apply if I am a college student or fresher?</span>
                             <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
-                            <div class="pb-5 pt-1 border-t border-white/5">
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-600 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-slate-100">
                                 Yes! Iconic Hub's internship is specially tailored for college students, freshers, and early-career tech professionals looking to gain genuine industry-grade project experience for their resumes and GitHub profiles.
                             </div>
                         </div>
@@ -975,33 +976,33 @@
         </section>
 
         <!-- 10. FINAL CALL TO ACTION SECTION -->
-        <section class="py-24 bg-gradient-to-t from-[#080c14] via-[#0d1424] to-[#0a101d] text-center relative overflow-hidden border-t border-white/5">
+        <section class="py-24 bg-gradient-to-t from-white via-slate-50 to-slate-100 text-center relative overflow-hidden border-t border-slate-200">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
-                <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20 inline-block mb-4">
-                    🔥 Batch 1.0 • Time Limit: October 31, 2026 (~7 Days Remaining)
+                <span class="text-emerald-700 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200 inline-block mb-4">
+                    🔥 Batch 1.0 • Deadline: October 31, 2026 • 1st Day: November 2, 2026
                 </span>
                 
-                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
                     Start Your 90-Day Tech Journey with <br />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600">
                         Iconic Hub & Santhosh M
                     </span>
                 </h2>
                 
-                <p class="text-slate-300 text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                    6 dedicated tracks, real cross-functional squads, continuous 2-day in-person meetup, and proven daily discipline. Strict admissions close October 31, 2026.
+                <p class="text-slate-600 text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                    6 dedicated tracks, real cross-functional squads, continuous 2-day in-person meetup, and proven daily discipline. Strict admissions close October 31, 2026 — 1st day of internship starts November 2, 2026.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#apply-section" class="open-register-modal w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-10 py-5 rounded-2xl shadow-2xl shadow-emerald-500/30 transform hover:-translate-y-1 transition text-lg">
+                    <a href="#apply-section" class="open-register-modal w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 hover:from-emerald-500 hover:to-teal-400 text-white font-extrabold px-10 py-5 rounded-2xl shadow-xl shadow-emerald-500/25 transform hover:-translate-y-1 transition text-lg">
                         <i class="fa-solid fa-clipboard-check text-2xl"></i>
                         <span>Start 2-Step Application Form</span>
                     </a>
                 </div>
 
-                <div class="mt-6 text-xs text-slate-400 flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                <div class="mt-6 text-xs text-slate-500 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-emerald-600"></i>
                     <span>Step 1: Google Form &rarr; Step 2: Official WhatsApp Community</span>
                 </div>
             </div>
@@ -1010,29 +1011,29 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#05080e] border-t border-white/5 py-12 text-slate-400 text-sm relative z-10">
+    <footer class="bg-slate-100 border-t border-slate-200 py-12 text-slate-600 text-sm relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/5">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-200">
                 <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-xl bg-[#0d1424] p-1 border border-white/10 flex items-center justify-center overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-white p-1 border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
                         <img src="logo.png" alt="Iconic Hub Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <div class="text-white font-bold tracking-tight text-base">Iconic Hub</div>
-                        <div class="text-xs text-emerald-400">Founded & Mentored by Santhosh M</div>
+                        <div class="text-slate-900 font-bold tracking-tight text-base">Iconic Hub</div>
+                        <div class="text-xs text-emerald-700">Founded & Mentored by Santhosh M</div>
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-400">
-                    <a href="#overview" class="hover:text-emerald-400 transition">Overview</a>
-                    <a href="#journey" class="hover:text-emerald-400 transition">90-Day Roadmap</a>
-                    <a href="#roles" class="hover:text-emerald-400 transition">6 Role Tracks</a>
-                    <a href="#routine" class="hover:text-emerald-400 transition">SOD & EOD</a>
-                    <a href="#meetup" class="hover:text-emerald-400 transition">2-Day Offline Meet</a>
-                    <a href="#pricing" class="hover:text-emerald-400 transition">Pricing</a>
-                    <a href="#founder" class="hover:text-emerald-400 transition">Founder</a>
-                    <a href="#apply-section" class="hover:text-emerald-400 transition font-bold text-emerald-400">Enrollment</a>
-                    <a href="#faq" class="hover:text-emerald-400 transition">FAQ</a>
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-600">
+                    <a href="#overview" class="hover:text-emerald-600 transition">Overview</a>
+                    <a href="#journey" class="hover:text-emerald-600 transition">90-Day Roadmap</a>
+                    <a href="#roles" class="hover:text-emerald-600 transition">6 Role Tracks</a>
+                    <a href="#routine" class="hover:text-emerald-600 transition">SOD & EOD</a>
+                    <a href="#meetup" class="hover:text-emerald-600 transition">2-Day Offline Meet</a>
+                    <a href="#pricing" class="hover:text-emerald-600 transition">Pricing</a>
+                    <a href="#founder" class="hover:text-emerald-600 transition">Founder</a>
+                    <a href="#apply-section" class="hover:text-emerald-600 transition font-bold text-emerald-700">Enrollment</a>
+                    <a href="#faq" class="hover:text-emerald-600 transition">FAQ</a>
                 </div>
             </div>
 
@@ -1048,52 +1049,52 @@
     </footer>
 
     <!-- Google Form Application Popup Modal -->
-    <div id="googleFormModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto transition-all duration-300">
-        <div class="relative w-full max-w-3xl bg-[#0d1424] border border-white/10 rounded-3xl shadow-2xl overflow-hidden my-auto animate-fadeIn flex flex-col max-h-[92vh]">
+    <div id="googleFormModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto transition-all duration-300">
+        <div class="relative w-full max-w-3xl bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden my-auto animate-fadeIn flex flex-col max-h-[92vh]">
             
             <!-- Success Overlay Screen with Animated Tick Mark -->
-            <div id="formSuccessScreen" class="hidden absolute inset-0 z-30 bg-[#0d1424]/98 backdrop-blur-xl flex flex-col items-center justify-center p-6 text-center animate-fadeIn">
-                <div class="w-20 h-20 rounded-full bg-emerald-500/20 border-2 border-emerald-500 flex items-center justify-center text-emerald-500 text-4xl mb-4 animate-check shadow-2xl shadow-emerald-500/40">
+            <div id="formSuccessScreen" class="hidden absolute inset-0 z-30 bg-white/98 backdrop-blur-xl flex flex-col items-center justify-center p-6 text-center animate-fadeIn">
+                <div class="w-20 h-20 rounded-full bg-emerald-50 border-2 border-emerald-500 flex items-center justify-center text-emerald-600 text-4xl mb-4 animate-check shadow-xl shadow-emerald-500/20">
                     <i class="fa-solid fa-check"></i>
                 </div>
-                <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/30 mb-3">
+                <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200 mb-3">
                     Application Confirmed
                 </span>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Google Form Submitted!</h3>
-                <p class="text-sm text-slate-300 max-w-sm mb-6 leading-relaxed">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">Google Form Submitted!</h3>
+                <p class="text-sm text-slate-600 max-w-sm mb-6 leading-relaxed">
                     Step 1 verified successfully. Step 2 is now unlocked! Redirecting you to the official Iconic Hub WhatsApp Group...
                 </p>
-                <div class="flex items-center gap-2.5 text-xs font-mono text-emerald-400 font-semibold bg-emerald-500/10 px-4 py-2 rounded-xl border border-emerald-500/20">
+                <div class="flex items-center gap-2.5 text-xs font-mono text-emerald-700 font-semibold bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200">
                     <i class="fa-solid fa-circle-notch fa-spin text-sm"></i>
                     <span>Opening WhatsApp Group in a moment...</span>
                 </div>
             </div>
 
             <!-- Modal Header -->
-            <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-slate-900/90">
+            <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-[#080c14] p-1 border border-white/10 flex items-center justify-center overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-white p-1 border border-slate-200 flex items-center justify-center overflow-hidden">
                         <img src="logo.png" alt="Iconic Hub Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <div class="text-white font-extrabold text-sm sm:text-base">Step 1: Iconic Hub Application Form</div>
-                        <div class="text-[11px] text-emerald-400 font-medium">Submit form details below &rarr; unlocks official WhatsApp group</div>
+                        <div class="text-slate-900 font-extrabold text-sm sm:text-base">Step 1: Iconic Hub Application Form</div>
+                        <div class="text-[11px] text-emerald-700 font-medium">Submit form details below &rarr; unlocks official WhatsApp group</div>
                     </div>
                 </div>
                 
                 <div class="flex items-center gap-2">
-                    <a href="https://forms.gle/836r8ikahauM9qZ18" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white px-2.5 py-1.5 rounded-lg border border-white/10 hover:border-white/20 transition hidden sm:inline-flex items-center gap-1.5">
+                    <a href="https://forms.gle/836r8ikahauM9qZ18" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-600 hover:text-slate-900 px-2.5 py-1.5 rounded-lg border border-slate-200 hover:border-slate-300 transition hidden sm:inline-flex items-center gap-1.5">
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         <span>Open in New Tab</span>
                     </a>
-                    <button id="closeFormModalBtn" aria-label="Close modal" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition">
+                    <button id="closeFormModalBtn" aria-label="Close modal" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition">
                         <i class="fa-solid fa-xmark text-lg"></i>
                     </button>
                 </div>
             </div>
 
             <!-- Modal Body with Google Form -->
-            <div class="flex-1 overflow-y-auto p-2 sm:p-4 bg-[#080c14]">
+            <div class="flex-1 overflow-y-auto p-2 sm:p-4 bg-slate-50">
                 <iframe 
                     id="gFormIframe" 
                     src="https://docs.google.com/forms/d/e/1FAIpQLScSsEiNDAiW7xj-YU2s4qqwxvbv-1oPG5llXui_W5NijzkoSQ/viewform?embedded=true" 
@@ -1102,18 +1103,18 @@
                     frameborder="0" 
                     marginheight="0" 
                     marginwidth="0"
-                    class="w-full rounded-xl border border-white/5"
+                    class="w-full rounded-xl border border-slate-200 bg-white"
                     loading="lazy">
                     Loading Google Form…
                 </iframe>
             </div>
 
             <!-- Modal Action Footer -->
-            <div class="p-4 sm:p-5 border-t border-white/10 bg-slate-900/95 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div class="text-xs text-slate-400 text-center sm:text-left">
+            <div class="p-4 sm:p-5 border-t border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="text-xs text-slate-600 text-center sm:text-left">
                     <span>Filled in your details? Click below to immediately unlock Step 2 and join WhatsApp!</span>
                 </div>
-                <button id="submitFormAndUnlockBtn" type="button" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-6 py-3 rounded-xl shadow-lg shadow-emerald-500/25 transition transform hover:scale-105 flex items-center justify-center gap-2 text-sm shrink-0">
+                <button id="submitFormAndUnlockBtn" type="button" class="w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold px-6 py-3 rounded-xl shadow-lg shadow-emerald-500/20 transition transform hover:scale-105 flex items-center justify-center gap-2 text-sm shrink-0">
                     <i class="fa-solid fa-check-circle text-base"></i>
                     <span>I Have Submitted Form &rarr; Connect on WhatsApp</span>
                 </button>
@@ -1131,7 +1132,7 @@
     </a>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" aria-label="Scroll to top" class="fixed bottom-6 left-6 z-40 bg-slate-900/90 border border-white/10 hover:border-emerald-500/40 text-slate-300 hover:text-white p-3 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300">
+    <button id="scrollTopBtn" aria-label="Scroll to top" class="fixed bottom-6 left-6 z-40 bg-white border border-slate-200 hover:border-emerald-500/40 text-slate-600 hover:text-slate-900 p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300">
         <i class="fa-solid fa-arrow-up text-sm"></i>
     </button>
 
