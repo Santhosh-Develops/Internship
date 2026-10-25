@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const googleFormModal = document.getElementById('googleFormModal');
     const closeFormModalBtn = document.getElementById('closeFormModalBtn');
     const submitFormAndUnlockBtn = document.getElementById('submitFormAndUnlockBtn');
-    const whatsappLink = "https://chat.whatsapp.com/GjMw1NF7P1k2wwUnmmqZA7?s=cl&p=a&mlu=4&ilr=4";
+    const whatsappLink = "https://chat.whatsapp.com/IjVGNhgbQRR4GgaFQhS05G";
 
     function openModal() {
         if (!googleFormModal) return;
