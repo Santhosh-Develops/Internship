@@ -445,20 +445,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Dynamic Countdown Timer (8 days)
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 8);
-    targetDate.setHours(23, 59, 59, 0);
+    // 6. Dynamic Countdown Timer (Strict Time Limit: October 31, 2026, 23:59:59 IST)
+    // Target date fixed to October 31, 2026 (~7 days remaining)
+    const targetDate = new Date(2026, 9, 31, 23, 59, 59, 999);
 
     function updateCountdown() {
         const now = new Date().getTime();
         const difference = targetDate.getTime() - now;
 
+        const elDays = document.getElementById('timerDays');
+        const elHours = document.getElementById('timerHours');
+        const elMins = document.getElementById('timerMins');
+        const elSecs = document.getElementById('timerSecs');
+
         if (difference <= 0) {
-            document.getElementById('timerDays').textContent = "00";
-            document.getElementById('timerHours').textContent = "00";
-            document.getElementById('timerMins').textContent = "00";
-            document.getElementById('timerSecs').textContent = "00";
+            if (elDays) elDays.textContent = "00";
+            if (elHours) elHours.textContent = "00";
+            if (elMins) elMins.textContent = "00";
+            if (elSecs) elSecs.textContent = "00";
+            const deadlineBanner = document.getElementById('deadlineStatusText');
+            if (deadlineBanner) {
+                deadlineBanner.textContent = "Admissions Closed (Deadline Reached: October 31, 2026)";
+            }
             return;
         }
 
@@ -468,11 +476,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         const format = (n) => String(n).padStart(2, '0');
-
-        const elDays = document.getElementById('timerDays');
-        const elHours = document.getElementById('timerHours');
-        const elMins = document.getElementById('timerMins');
-        const elSecs = document.getElementById('timerSecs');
 
         if (elDays) elDays.textContent = format(days);
         if (elHours) elHours.textContent = format(hours);

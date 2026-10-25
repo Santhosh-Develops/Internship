@@ -10,7 +10,7 @@ An ultra-modern, high-converting landing page built for Santhosh M's 90-Day Tech
   - UI/UX Design (Figma Systems, Wireframing, User Testing)
   - QA & Testing (Manual Test Plans, Postman API Testing, Automation)
   - Product & Business Analyst (PRD writing, User Stories, Agile Sprints)
-- **Live Urgency Countdown Timer:** Counts down dynamically to cohort registration close.
+- **Live Urgency Countdown Timer:** Counts down in real-time to the strict cohort deadline of October 31, 2026 (~7 days remaining).
 - **Interactive Daily Cadence Roadmap:** Start-of-day (SOD), 4-hour core focus, and End-of-day (EOD) proof workflow with Wednesday Agile Scrum highlights.
 - **100-Point Evaluation Matrix:** Transparent point-based certification scorecard.
 - **2 Offline Meetup Spotlights:** Highlighting in-person connects in India + Demo Day pitch.

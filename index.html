@@ -60,9 +60,9 @@
     <!-- Top Urgent Batch Announcement Banner -->
     <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-emerald-600 via-indigo-600 to-emerald-600 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-lg flex items-center justify-center gap-2 flex-wrap">
         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] bg-white/20 backdrop-blur-sm uppercase tracking-wider font-extrabold animate-pulse">
-            🔥 Iconic Hub Batch 1.0
+            🔥 Batch 1.0 Deadline: October 31, 2026
         </span>
-        <span>Admissions Open! Remote Work + Continuous 2-Day In-Person Offline Meetup.</span>
+        <span>Admissions Open! Only ~7 Days Remaining to Enroll • Remote Work + Continuous 2-Day In-Person Meetup.</span>
         <a href="#apply-section" class="open-register-modal underline decoration-emerald-200 hover:text-emerald-100 font-bold ml-1 transition">
             Apply Now &rarr;
         </a>
@@ -163,27 +163,33 @@
 
                     <!-- Countdown Timer Card -->
                     <div class="w-full max-w-xl bg-slate-900/60 border border-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-5 mb-10 shadow-2xl">
-                        <div class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-3 flex items-center justify-center gap-2">
-                            <i class="fa-regular fa-clock text-emerald-400"></i>
-                            <span>Next Batch Admissions Close In:</span>
+                        <div class="text-xs uppercase tracking-widest text-slate-300 font-semibold mb-3 flex items-center justify-center gap-2 flex-wrap text-center">
+                            <i class="fa-regular fa-clock text-emerald-400 animate-pulse"></i>
+                            <span id="deadlineStatusText">Time Limit: <strong class="text-emerald-400 font-extrabold">October 31, 2026</strong> <span class="text-slate-400 font-normal">(~7 Days Remaining)</span></span>
                         </div>
                         <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center font-mono">
                             <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400" id="timerDays">08</span>
+                                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400" id="timerDays">06</span>
                                 <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Days</span>
                             </div>
                             <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerHours">14</span>
+                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerHours">16</span>
                                 <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Hours</span>
                             </div>
                             <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerMins">45</span>
+                                <span class="text-2xl sm:text-3xl font-extrabold text-white" id="timerMins">00</span>
                                 <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Mins</span>
                             </div>
                             <div class="bg-[#080c14]/80 border border-white/5 rounded-xl p-2 sm:p-3">
-                                <span class="text-2xl sm:text-3xl font-extrabold text-indigo-400" id="timerSecs">20</span>
+                                <span class="text-2xl sm:text-3xl font-extrabold text-indigo-400" id="timerSecs">00</span>
                                 <span class="block text-[10px] sm:text-xs text-slate-400 uppercase mt-0.5">Secs</span>
                             </div>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <span class="text-[11px] text-amber-300/90 font-medium flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs"></i>
+                                Strict Time Limit: Batch 1.0 applications close October 31, 2026 (11:59 PM IST)
+                            </span>
                         </div>
                     </div>
 
@@ -787,9 +793,14 @@
                     <p class="text-slate-400 mt-3 text-sm sm:text-base">
                         To maintain high cohort quality, every applicant first completes our Google Application Form. Once submitted, the official WhatsApp community link is unlocked!
                     </p>
-                    <div class="mt-4" id="stepStatusBadge">
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full">
-                            <i class="fa-solid fa-lock text-xs"></i> Complete Step 1 below to unlock Step 2
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5">
+                        <div id="stepStatusBadge">
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full">
+                                <i class="fa-solid fa-lock text-xs"></i> Complete Step 1 below to unlock Step 2
+                            </span>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-rose-300 bg-rose-500/10 border border-rose-500/25 px-3 py-1 rounded-full">
+                            <i class="fa-solid fa-hourglass-half text-rose-400"></i> Time Limit: October 31, 2026 (~7 Days Left)
                         </span>
                     </div>
                 </div>
@@ -900,6 +911,18 @@
                     
                     <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
                         <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
+                            <span class="text-base sm:text-lg">What is the application deadline / time limit for Batch 1.0?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6 text-slate-300 text-sm leading-relaxed">
+                            <div class="pb-5 pt-1 border-t border-white/5">
+                                The strict time limit to apply for Batch 1.0 is <strong>October 31, 2026 at 11:59 PM IST</strong> (~7 days remaining). Admissions will close promptly at the deadline to finalize agile squads, assign project repositories, and distribute orientation kits.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card rounded-2xl border border-white/10 overflow-hidden transition-all duration-200">
+                        <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center gap-4 hover:text-emerald-300 transition" aria-expanded="false">
                             <span class="text-base sm:text-lg">How does the 2-Step Registration work?</span>
                             <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
                         </button>
@@ -956,7 +979,7 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
                 <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20 inline-block mb-4">
-                    Iconic Hub Cohort 1.0
+                    🔥 Batch 1.0 • Time Limit: October 31, 2026 (~7 Days Remaining)
                 </span>
                 
                 <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
@@ -967,7 +990,7 @@
                 </h2>
                 
                 <p class="text-slate-300 text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                    6 dedicated tracks, real cross-functional squads, continuous 2-day in-person meetup, and proven daily discipline.
+                    6 dedicated tracks, real cross-functional squads, continuous 2-day in-person meetup, and proven daily discipline. Strict admissions close October 31, 2026.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
